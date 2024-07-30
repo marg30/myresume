@@ -1,4 +1,4 @@
-title: Title of your CV site
+title: CV Mariana Galdo Martinez
 profile_img: /assets/img/profile.webp
 icon_img: /assets/img/icon.webp
 
@@ -11,9 +11,10 @@ email: marianagaldomartinez@gmail.com
 linkedin_username: marianagaldo
 github_username: marg30
 
+domain: marg30.github.io
 # If your repo name follows the format "<user-name>.github.io", then leave the below blank.
 # Otherwise, set its value as "/<repo-name>". ex) baseurl: /resume
-baseurl: myresume/
+baseurl: /myresume
 
 exclude:
   - _posts/
