@@ -2,6 +2,12 @@ subject: Awards
 listing-order: 6
 icon: "/assets/img/trophy.svg"
 contents:
+  - title: ALEARG-KOSPIE scholarship
+    description: Awarded by the German Academic Exchange Service (DAAD) and the Ministry of Education of Argentina
+    date: Dec. 2024
+  - title: UBAINT scholarship
+    description: Awarded by the University of Buenos Aires (UBA)
+    date: Sept. 2024
   - title: OpportunityUSA scholarship
     description: Awarded by EducationUSA, Fulbright
     date: Apr. 2018

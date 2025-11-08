@@ -3,11 +3,18 @@ listing-order: 2
 icon: "/assets/img/briefcase.svg"
 contents:
   - title: Universidad de Buenos Aires
-    role: Operating Systems
+    role: Operating Systems Teaching Assistant
     description:
       - Evaluated and provided feedback on student assignments and projects related to Operating Systems, ensuring adherence to course standards and guidelines.
       - Deepened understanding of Operating Systems concepts and their practical applications.
-    date: Mar. 2024 - Ongoing
+    date: Mar. 2024 - Aug. 2025
+  - title: Center of New Technologies, Universidad de Buenos Aires
+    role: Intern
+    description:
+      - API for Multimodal RAG Development: Designed and implemented an API that allow multimodal Retrieval Augmented Generation (RAG). 
+      - Workshops Organization on RAG and Langflow: Collaborated with a multidisciplinary team to  plan and conduct educational workshops, explaining advanced RAG concepts. 
+      - Technical Skills: I deepened my knowledge of AI tools and libraries such as HuggingFace, Ollama, Langflow, and Crewai, gaining hands-on experience in their integration and customization for advanced AI projects. 
+    date: Sept. 2024 - Feb. 2025
   - title: SAP
     role: iXp Finance Intern
     description:
