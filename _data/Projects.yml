@@ -9,7 +9,6 @@ contents:
       - Collaborated with an international research team to apply the software in epilepsy diagnostics.
       - Presented and documented research results in Spanish for academic dissemination.
       - "Technology Used: Python, PyQt5, NumPy, SciPy, MNE-Python, pyqtgraph"
-    image: "![](https://cdn-icons-png.flaticon.com/512/9851/9851782.png)"
   - title: "Signal Processing and Visualization in Brain Stimulation"
     description: 
       - Applied Retrieval-Augmented Generation (RAG) techniques to improve the efficiency and accuracy of AI models.
@@ -18,7 +17,6 @@ contents:
       - Documented and presented findings during internal meetings and university events.
       - Showcased the project in international event "Nerdearla Mexico 2024". ([Link](https://www.youtube.com/watch?v=2HmgxSwYEQM))
       - "Technology Used: Langflow, Python, RAG, Generative AI, crewai, Agents"
-    image: "![](https://www.cake.ai/hubfs/Components%20Logos/Type=Technology%2C%20Size=S%2C%20Label=Langflow.png)"
   - title: "Sejong-bot ([https://github.com/jarjumarvin/sejong-bot](https://github.com/jarjumarvin/sejong-bot))"
     description: 
       - Korean Language bot for Discord
