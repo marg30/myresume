@@ -126,7 +126,7 @@
    ------------------------------------------------------------------------- */
 :root {
   --px: 4px;
-  --font-display: "Pixelify Sans", "Press Start 2P", "Courier New", monospace;
+  --font-display: "Press Start 2P", "Courier New", monospace;
   --font-body: "Nunito", "Segoe UI", system-ui, -apple-system, sans-serif;
   --font-label: "Silkscreen", "Pixelify Sans", "Courier New", monospace;
   --maxw: 1040px;
