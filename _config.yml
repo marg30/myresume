@@ -4,8 +4,8 @@
 # ─────────────────────────────────────────────────────────────
 
 # Shown in the browser tab and in search results
-title: "Your Name"
-description: "Junior software engineer based in Buenos Aires. Full-stack web development with TypeScript, Python and SQL."
+title: "Mariana Galdo Martinez"
+description: "Junior software engineer based in Buenos Aires. Open to backend and software engineering roles, with experience in Python, Go, distributed systems and applied AI."
 
 # Address of the site.
 #  - If your repository is called USERNAME.github.io:  url: "https://USERNAME.github.io"   baseurl: ""
