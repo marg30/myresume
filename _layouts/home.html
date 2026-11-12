@@ -1,148 +1,176 @@
+{%- assign L = page.lang | default: "en" -%}
+{%- assign ui = site.data.ui[L] -%}
+{%- assign D = site.data[L] -%}
+{%- assign about = D.about -%}
 <!DOCTYPE html>
-<html lang="en">
-{% assign meta = "" | split: "" %}
-{% for yml_file in site.data %}
-  {% assign meta = meta | push:yml_file[1] %}
-{% endfor %}
-{% assign meta = meta | sort: 'listing-order' %}
-
+<html lang="{{ L }}" data-theme="{{ site.default_theme }}">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ site.title }}</title>
+  <meta name="theme-color" content="#0D1238">
   {% seo %}
+  <link rel="icon" type="image/svg+xml" href="{{ site.icon_img | relative_url }}">
+  {% for l in site.languages %}<link rel="alternate" hreflang="{{ l.code }}" href="{{ l.path | absolute_url }}">
+  {% endfor %}
+  <script>
+    /* Apply the saved theme before the page paints and mark JavaScript as available. */
+    (function () {
+      var d = document.documentElement;
+      d.classList.add('js');
+      try {
+        var t = localStorage.getItem('pf-theme');
+        if (t && {{ site.themes | map: "id" | jsonify }}.indexOf(t) > -1) d.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Pixelify+Sans:wght@400;600;700&family=Silkscreen:wght@400;700&display=swap">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
-  <link rel="icon" type="image/png" href="{{ site.icon_img | prepend: site.baseurl }}">
-  <link rel="shortcut icon" type="image/png" href="{{ site.icon_img | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | prepend: site.baseurl }}">
-  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  {%- assign same = "" | split: "" -%}
+  {%- if site.github_username and site.github_username != "" -%}
+    {%- capture u -%}https://github.com/{{ site.github_username }}{%- endcapture -%}
+    {%- assign same = same | push: u -%}
+  {%- endif -%}
+  {%- if site.linkedin_username and site.linkedin_username != "" -%}
+    {%- capture u -%}https://www.linkedin.com/in/{{ site.linkedin_username }}{%- endcapture -%}
+    {%- assign same = same | push: u -%}
+  {%- endif -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": {{ site.name | jsonify }},
+    "jobTitle": {{ about.job | jsonify }},
+    "email": {{ site.email | jsonify }},
+    "address": { "@type": "PostalAddress", "addressLocality": {{ site.address | jsonify }} },
+    "knowsLanguage": {{ D.languages.items | map: "name" | jsonify }},
+    "sameAs": {{ same | jsonify }}
+  }
+  </script>
 </head>
 
-<body>
-  <div id="sidebar">
-    <ul class="toc-box"></ul>
-  </div>
-  <div id="about">
-    <div class="profile-zone">
-      <img class="profile-img" src="{{ site.profile_img | prepend: site.baseurl }}" alt="My Photo">
-      <ul class="personal-info">
-        {% if site.phone_number %}
-        <li><a aria-label="My Phone">
-          <img src="{{ '/assets/img/phone.svg' | prepend: site.baseurl }}" alt="My Phone Number">
-          <div><span>{{ site.phone_number }}</span></div>
-        </a></li>
-        {% endif %}
-        {% if site.address %}
-        <li><a aria-label="My Address" href="https://www.google.com/maps/search/{{ site.address }}">
-          <img src="{{ '/assets/img/location-dot.svg' | prepend: site.baseurl }}" alt="My Address">
-          <div><span>{{ site.address }}</span></div>
-        </a></li>
-        {% endif %}
-        {% if site.email %}
-          <li><a aria-label="My Email" href="mailto:{{ site.email }}">
-            <img src="{{ '/assets/img/envelope.svg' | prepend: site.baseurl }}" alt="My Email">
-            <div><span>{{ site.email }}</span></div>
-          </a></li>
-        {% endif %}
-        {% if site.linkedin_username %}
-          <li><a aria-label="My LinkedIn" href="https://www.linkedin.com/in/{{ site.linkedin_username }}">
-            <img src="{{ '/assets/img/linkedin.svg' | prepend: site.baseurl }}" alt="My LinkedIn">
-            <div><span>@{{ site.linkedin_username }}</span></div>
-          </a></li>
-        {% endif %}
-        {% if site.github_username %}
-          <li><a aria-label="My Github" href="https://github.com/{{ site.github_username }}">
-            <img src="{{ '/assets/img/github.svg' | prepend: site.baseurl }}" alt="My Github">
-            <div><span>@{{ site.github_username }}</span></div>
-          </a></li>
-        {% endif %}
-        {% if site.twitter_username %}
-          <li><a aria-label="My Twitter" href="https://twitter.com/{{ site.twitter_username }}">
-            <img src="{{ '/assets/img/twitter.svg' | prepend: site.baseurl }}" alt="My Twitter">
-            <div><span>@{{ site.twitter_username }}</span></div>
-          </a></li>
-        {% endif %}
-        {% if site.instagram_username %}
-          <li><a aria-label="My Instagram" href="https://www.instagram.com/{{ site.instagram_username }}">
-            <img src="{{ '/assets/img/instagram.svg' | prepend: site.baseurl }}" alt="My Instagram">
-            <div><span>@{{ site.instagram_username }}</span></div>
-          </a></li>
-        {% endif %}
-        {% if site.facebook_username %}
-          <li><a aria-label="My Facebook" href="https://www.facebook.com/{{ site.facebook_username }}">
-            <img src="{{ '/assets/img/facebook.svg' | prepend: site.baseurl }}" alt="My Facebook">
-            <div><span>@{{ site.facebook_username }}</span></div>
-          </a></li>
-        {% endif %}
-        {% if site.youtube_username %}
-          <li><a aria-label="My Youtube" href="https://www.youtube.com/{{ site.youtube_username }}">
-            <img src="{{ '/assets/img/youtube.svg' | prepend: site.baseurl }}" alt="My Youtube">
-            <div><span>@{{ site.youtube_username }}</span></div>
-          </a></li>
-        {% endif %}
-        {% if site.blog_url %}
-          <li><a aria-label="My Blog" href="{{ site.blog_url }}">
-            <img src="{{ '/assets/img/house.svg' | prepend: site.baseurl }}" alt="My Blog">
-            <div><span>{{ site.blog_url }}</span></div>
-          </a></li>
-        {% endif %}
-      </ul>
+<body id="top" data-copied="{{ ui.copied }}" data-all="{{ ui.filter_all }}" data-showing="{{ ui.showing }}" data-of="{{ ui.of }}" data-projects="{{ ui.projects_word }}" data-filter-label="{{ ui.filter_label }}">
+  <a class="skip" href="#main">{{ ui.skip }}</a>
+
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="#top">
+        <span class="pix" data-pix="moon" aria-hidden="true"></span>
+        <span class="brand-name">{{ site.name }}</span>
+      </a>
+
+      <nav class="nav" aria-label="{{ ui.nav }}">
+        <ul role="list">
+          {% for s in site.sections %}<li><a href="#{{ s }}" data-nav="{{ s }}">{{ ui.sections[s] }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+
+      <div class="controls">
+        <div class="seg" role="group" aria-label="{{ ui.language }}">
+          {% for l in site.languages %}<a href="{{ l.path | relative_url }}" hreflang="{{ l.code }}" lang="{{ l.code }}"{% if l.code == L %} aria-current="true"{% endif %}>{{ l.label }}</a>
+          {% endfor %}
+        </div>
+        <div class="seg" role="group" aria-label="{{ ui.theme }}">
+          {% for t in site.themes %}<button type="button" class="swatch" data-theme-set="{{ t.id }}" title="{{ t.label }}" aria-label="{{ ui.theme }}: {{ t.label }}" aria-pressed="false"></button>
+          {% endfor %}
+        </div>
+      </div>
     </div>
-    <div class="name-zone">
-      <h1>{{ site.name }}</h1>
-      <h2>{{ site.job }}</h2>
+  </header>
+
+  <section class="hero" aria-labelledby="name">
+    <canvas id="sky" aria-hidden="true"></canvas>
+    <div class="wrap hero-in">
+
+      {%- assign items = "" | split: "" -%}
+      {%- if site.phone_number and site.phone_number != "" -%}
+        {%- capture it -%}{% include contact_item.html icon="phone" prefix="tel:" value=site.phone_number aria="Phone" %}{%- endcapture -%}
+        {%- assign items = items | push: it -%}
+      {%- endif -%}
+      {%- if site.address and site.address != "" -%}
+        {%- assign addr = site.address | url_encode -%}
+        {%- capture it -%}{% include contact_item.html icon="location-dot" prefix="https://www.google.com/maps/search/" value=addr label=site.address aria="Location" external="1" %}{%- endcapture -%}
+        {%- assign items = items | push: it -%}
+      {%- endif -%}
+      {%- if site.email and site.email != "" -%}
+        {%- capture it -%}{% include contact_item.html icon="envelope" prefix="mailto:" value=site.email aria="Email" %}{%- endcapture -%}
+        {%- assign items = items | push: it -%}
+      {%- endif -%}
+      {%- if site.linkedin_username and site.linkedin_username != "" -%}
+        {%- capture it -%}{% include contact_item.html icon="linkedin" prefix="https://www.linkedin.com/in/" value=site.linkedin_username aria="LinkedIn" external="1" %}{%- endcapture -%}
+        {%- assign items = items | push: it -%}
+      {%- endif -%}
+      {%- if site.github_username and site.github_username != "" -%}
+        {%- capture it -%}{% include contact_item.html icon="github" prefix="https://github.com/" value=site.github_username aria="GitHub" external="1" %}{%- endcapture -%}
+        {%- assign items = items | push: it -%}
+      {%- endif -%}
+      {%- if site.twitter_username and site.twitter_username != "" -%}
+        {%- capture it -%}{% include contact_item.html icon="x-twitter" prefix="https://x.com/" value=site.twitter_username aria="X" external="1" %}{%- endcapture -%}
+        {%- assign items = items | push: it -%}
+      {%- endif -%}
+      {%- if site.blog_url and site.blog_url != "" -%}
+        {%- capture it -%}{% include contact_item.html icon="house" prefix="" value=site.blog_url aria="Website" external="1" %}{%- endcapture -%}
+        {%- assign items = items | push: it -%}
+      {%- endif -%}
+
+      <div class="profile-zone">
+        <ul class="contact contact-left" role="list">{% for it in items %}{% assign m = forloop.index0 | modulo: 2 %}{% if m == 0 %}{{ it }}{% endif %}{% endfor %}</ul>
+        <div class="photo">
+          <img src="{{ site.profile_img | relative_url }}" alt="{{ ui.photo_alt }} {{ site.name }}" width="192" height="192">
+        </div>
+        <ul class="contact contact-right" role="list">{% for it in items %}{% assign m = forloop.index0 | modulo: 2 %}{% if m == 1 %}{{ it }}{% endif %}{% endfor %}</ul>
+      </div>
+
+      <div class="name-zone">
+        {% if about.availability and about.availability != "" %}<p class="status"><span class="dot" aria-hidden="true"></span>{{ about.availability }}</p>{% endif %}
+        <h1 id="name">{{ site.name }}</h1>
+        <p class="job"><span class="type" style="--chars: {{ about.job | size }}">{{ about.job }}</span></p>
+        <p class="tagline">{{ about.tagline }}</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#contact">{% include icon.html name="envelope" %}<span>{{ ui.contact_me }}</span></a>
+          {% if about.cv_url and about.cv_url != "" %}<a class="btn" href="{{ about.cv_url | relative_url }}" download>{% include icon.html name="download" %}<span>{{ ui.download_cv }}</span></a>{% endif %}
+          {% if site.github_username and site.github_username != "" %}<a class="btn" href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">{% include icon.html name="github" %}<span>GitHub</span></a>{% endif %}
+        </div>
+      </div>
+
+      <div class="hero-gap" aria-hidden="true"></div>
+
+      <section class="glance card px" aria-labelledby="h-glance">
+        <h2 id="h-glance" class="lbl">{{ ui.at_a_glance }}</h2>
+        <dl>
+          {% for f in about.facts %}<div><dt>{{ f.label }}</dt><dd>{{ f.value }}</dd></div>
+          {% endfor %}
+        </dl>
+      </section>
     </div>
-  </div>
-  <div id="contents">
-    <ul>
-      {% for subject in meta %}
-        <li class="subject" id="{{ subject.subject }}">
-          <h2 class="subject-name">
-            <div>
-              <img class="subject-icon" src="{{ subject.icon | prepend: site.baseurl }}" alt="{{ subject.subject | prepend: site.baseurl }}">
-            </div>
-            {{ subject.subject }}
-          </h2>
-          <ul>
-              {% for member in subject.contents %}
-              <li class="item">
-                  <div class="content-header">
-                    {{ member.title | markdownify }}
-                    {% if member.date %}
-                      <span class="content-date">
-                        <img src="{{ '/assets/img/calendar.webp' | prepend: site.baseurl}}" alt="date">
-                        {{ member.date }}
-                      </span>
-                    {% endif %}
-                  </div>
-                  {% for item in member %}
-                    {% if item[0] != "title" and item[0] != "date" %}
-                      {% if item[1].first %}
-                        <ul>
-                          {% for subitem in item[1] %}
-                          <li class="subitem">
-                            {{ subitem | markdownify }}
-                          </li>
-                          {% endfor %}
-                        </ul>
-                      {% else %}
-                        {{ item[1] | markdownify }}
-                      {% endif %}
-                    {% endif %}
-                  {% endfor %}
-              </li>
-              {% endfor %}
-          </ul>
-        </li>
-      {% endfor %}
-      </ul>
-  </div>
-  <div id="footer">
-    <span>
-      Copyright © 2024 | <a href="https://github.com/byanko55">Yankos</a>
-    </span>
-  </div>
+  </section>
+
+  <main id="main">
+    {% for s in site.sections %}
+      {% if s == "about" %}{% include sections/about.html %}
+      {% elsif s == "projects" %}{% include sections/projects.html %}
+      {% elsif s == "experience" %}{% include sections/experience.html %}
+      {% elsif s == "skills" %}{% include sections/skills.html %}
+      {% elsif s == "education" %}{% include sections/education.html %}
+      {% elsif s == "languages" %}{% include sections/languages.html %}
+      {% elsif s == "research" %}{% include sections/research.html %}
+      {% elsif s == "contact" %}{% include sections/contact.html %}
+      {% endif %}
+    {% endfor %}
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-in">
+      <p>© {{ site.time | date: "%Y" }} {{ site.name }} · {{ ui.built_with_jekyll }}, {{ ui.based_on }} <a href="https://github.com/byanko55/jekyll-professional-resume" target="_blank" rel="noopener">jekyll-professional-resume</a></p>
+      <p><a href="#top">{{ ui.back_to_top }} ↑</a></p>
+    </div>
+  </footer>
+
+  <script src="{{ '/assets/js/sky.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
 </body>
-<script src="{{ '/assets/js/main.js' | prepend: site.baseurl }}"></script>
 </html>

@@ -1,0 +1,32 @@
+# EDIT: everything here is sample text. Replace it with your own.
+#
+# Recruiter tip: the first screen of the page is what gets read in the first
+# 10 seconds. Keep "job" and "tagline" specific (role + 2 main technologies)
+# and keep "facts" factual (location, work mode, availability, languages).
+
+job: "Junior Backend Software Engineer"
+tagline: "Backend developer (Python, Go) with experience in test automation, distributed systems and applied AI."
+availability: "Open to work"
+cv_url: ""
+
+summary:
+  - "Computer Engineering graduate from the University of Buenos Aires, with international academic and professional experience in Germany and Spain. I have worked on software development, test automation, AI applications and research, combining strong computer science fundamentals with hands-on experience."
+  - "I enjoy designing and building reliable software, solving problems through code, and continuously learning new technologies. My interests include backend development, distributed systems and applied AI, particularly large language models and automation."
+
+facts:
+  - label: Target roles
+    value: "Junior Backend / Software Engineer · AI Engineer"
+  - label: Location
+    value: "Buenos Aires, Argentina (UTC−3)"
+  - label: Work mode
+    value: "Remote, hybrid or on-site in Buenos Aires"
+  - label: Availability
+    value: "Open to full-time opportunities"
+  - label: Languages
+    value: "Spanish (native) · English (C2) · German (C1)"
+
+looking_for:
+  - "A backend or software engineering role where I can contribute to building reliable, maintainable applications and services."
+  - "Opportunities to work with Python, Go, distributed systems, APIs and data-intensive applications."
+  - "Teams that value code quality, automated testing, collaboration and continuous learning."
+  - "Opportunities to explore applied AI and integrate LLM-based solutions into real-world products."

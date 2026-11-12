@@ -1,0 +1,2 @@
+{%- assign label = include.label | default: include.value -%}
+<li><a class="c-link" href="{{ include.prefix }}{{ include.value }}"{% if include.external %} target="_blank" rel="noopener"{% endif %} aria-label="{{ include.aria }}: {{ label }}">{% include icon.html name=include.icon %}<span class="lbl">{{ label }}</span></a></li>

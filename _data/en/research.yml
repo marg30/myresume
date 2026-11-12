@@ -1,0 +1,26 @@
+# EDIT: your research project. Remove "research" from sections in _config.yml if you do not need it.
+#
+# Recruiter tip: one question, one method, one result with a number.
+
+intro: "Research projects exploring applied artificial intelligence, natural language processing, and biomedical signal processing. Combining experimental evaluation, data analysis, and software development to investigate real-world challenges."
+
+items:
+  - title: "Assessing Bias Detection in Argentine Spanish: Challenges for Large Language Models and Translated Benchmarks"
+    meta: "Research project · Leibniz University Hannover · 2025–2026 · DAAD exchange scholarship"
+    question: "How reliably can instruction-tuned large language models detect social stereotypes in Argentine Spanish, and how do prompting strategies and culturally grounded evaluation affect their performance?"
+    approach: "Evaluated Llama-3-8B-Instruct and Qwen-3-8B using chat-based prompting and four prompt variants adapted from CrowS-Pairs and standard stereotype definitions. Compared model performance using macro-F1, false positive rate (FPR), and false negative rate (FNR), with particular attention to Argentine cultural norms and translation artifacts."
+    result: "The best-performing model achieved a macro-F1 score of 0.557. False positives were a major challenge, with models struggling to distinguish stereotype reinforcement from stereotype violation. Translation artifacts in English-centric benchmarks further affected evaluation reliability."
+    tags: ["Python", "NLP", "LLMs", "Llama", "Qwen", "Hugging Face", "Macro-F1", "Model Evaluation", "Prompt Engineering"]
+    links:
+      - { label: "Read the paper", url: "https://drive.google.com/file/d/1QGNZvtLcFufCLWbimweY88LqGOdbqnjB/view?usp=sharing" }
+      - { label: "Code", url: "https://gitlab.uni-hannover.de/mgaldo/bias-detection-in-argentine-spanish" }
+
+  - title: "Signal Processing and Visualization in Brain Stimulation"
+    meta: "Bachelor's thesis · Universidad de Buenos Aires · 2025 · Advisors: Lic. Andrés Juárez and Dr. Ing. Fernando Chaure"
+    question: "How can electrophysiological signals associated with brain stimulation be processed and visualized to support the analysis of brain activity and electrode configurations?"
+    approach: "Developed a Python-based backend for processing and analyzing electrophysiological signals, together with an interactive visualization frontend featuring three-dimensional electrode positions. Applied signal-processing techniques and scientific computing tools to support the exploration of brain stimulation data."
+    result: "Developed an integrated signal-processing and visualization tool for exploring electrophysiological data and electrode configurations, supporting research related to epilepsy and brain stimulation."
+    tags: ["Python", "Signal Processing", "Neuroscience", "NumPy", "SciPy", "MNE-Python", "PyQt5", "3D Visualization"]
+    links:
+      - { label: "Read the paper", url: "https://drive.google.com/file/d/1g9_Bw9n52mz7gi2kt-ouX-oJ9mAeQau7/view?usp=sharing" }
+      - { label: "Code", url: "https://github.com/shizus/trabajo-profesional-estimulacion-cerebral" }

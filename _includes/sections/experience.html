@@ -1,0 +1,33 @@
+<section class="section" id="experience" aria-labelledby="h-experience">
+  <div class="wrap">
+    {% include sec_head.html id="experience" icon="briefcase" intro=D.experience.intro %}
+    <ol class="timeline" role="list">
+      {% for e in D.experience.items %}
+      <li class="tl-item reveal">
+        <span class="node{% if forloop.first %} now{% endif %}" aria-hidden="true"></span>
+        <article class="card px">
+          <header class="e-head">
+            <div>
+              <h3>{{ e.role }}</h3>
+              <p class="org">{{ e.company }}{% if e.location and e.location != "" %} · {{ e.location }}{% endif %}</p>
+            </div>
+            <p class="date">{{ e.date }}</p>
+          </header>
+          <ul class="bullets" role="list">
+            {% for h in e.highlights %}<li>{{ h | markdownify | remove: "<p>" | remove: "</p>" | strip }}</li>
+            {% endfor %}
+          </ul>
+          {% if e.transferable and e.transferable != "" %}
+          <div class="carry"><span class="lbl">{{ ui.transferable }}</span><p>{{ e.transferable }}</p></div>
+          {% endif %}
+          {% if e.tools %}
+          <div class="tagrow"><span class="lbl">{{ ui.tools }}</span>
+            <ul class="tags" role="list">{% for t in e.tools %}<li class="tag tool">{{ t }}</li>{% endfor %}</ul>
+          </div>
+          {% endif %}
+        </article>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>

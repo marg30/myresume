@@ -1,27 +1,75 @@
-title: CV Mariana Galdo Martinez
-profile_img: /assets/img/profile.png
-icon_img: /assets/img/icon.webp
+# ─────────────────────────────────────────────────────────────
+#  Blue Hour Portfolio · site settings
+#  Based on byanko55/jekyll-professional-resume (MIT)
+# ─────────────────────────────────────────────────────────────
 
+# Shown in the browser tab and in search results
+title: "Your Name"
+description: "Junior software engineer based in Buenos Aires. Full-stack web development with TypeScript, Python and SQL."
+
+# Address of the site.
+#  - If your repository is called USERNAME.github.io:  url: "https://USERNAME.github.io"   baseurl: ""
+#  - If it has any other name (for example "portfolio"): url: "https://USERNAME.github.io"  baseurl: "/portfolio"
+url: ""
+baseurl: "/myresume"
+
+# ── Main introduction (same fields as the original template) ──
 name: "Mariana Galdo Martinez"
-job: "Software Engineering Student"
+profile_img: /assets/img/profile.png   # replace with your photo, e.g. /assets/img/me.jpg (square, 400x400 or larger)
+icon_img: /assets/img/icon.svg
 
-phone_number:
-address: Hannover, Germany
-email: marianagaldomartinez@gmail.com
-linkedin_username: mariana-galdo
-github_username: marg30
+phone_number: ""                       # leave empty ("") to hide an item
+address: "Buenos Aires, Argentina"
+email: "marianagaldomartinez@gmail.com"
+linkedin_username: "mariana-galdo"
+github_username: "marg30"
+twitter_username: ""
+blog_url: ""
 
-domain: marg30.github.io
-# If your repo name follows the format "<user-name>.github.io", then leave the below blank.
-# Otherwise, set its value as "/<repo-name>". ex) baseurl: /resume
-baseurl: /myresume
+# ── Themes (the colors live in assets/css/main.css) ───────────
+default_theme: daybreak
+themes:
+  - id: blue-hour
+    label: Blue Hour
+  - id: daybreak
+    label: Daybreak
+  - id: midnight
+    label: Midnight
+
+# ── Languages of the site ─────────────────────────────────────
+# Content for each language lives in _data/<code>/ and a page at <path>index.html.
+# To publish in English only: delete the "es" entry below, the es/ folder and _data/es/.
+languages:
+  - code: en
+    label: EN
+    path: /
+  - code: es
+    label: ES
+    path: /es/
+
+# ── Order of the sections on the page ─────────────────────────
+# Reorder freely or delete a line to hide a section.
+# Career changers: keep "projects" before "experience" so recruiters see your code first.
+sections:
+  - about
+  - projects
+  - experience
+  - skills
+  - education
+  - languages
+  - research
+  - contact
+
+# ── Build settings ────────────────────────────────────────────
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 exclude:
-  - _posts/
-  - resources/
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
   - vendor/
-
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
+  - node_modules/
+  - .github/

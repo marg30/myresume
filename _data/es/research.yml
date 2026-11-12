@@ -1,0 +1,22 @@
+intro: "Proyectos de investigación en inteligencia artificial aplicada, procesamiento del lenguaje natural y procesamiento de señales biomédicas. Experiencia en evaluación experimental, análisis de datos y desarrollo de software para abordar problemas del mundo real."
+
+items:
+  - title: "Evaluación de la detección de sesgos en español argentino: desafíos para los grandes modelos de lenguaje y los benchmarks traducidos"
+    meta: "Proyecto de investigación · Leibniz Universität Hannover · 2025–2026 · Beca DAAD"
+    question: "¿Con qué nivel de confiabilidad los grandes modelos de lenguaje ajustados para seguir instrucciones pueden detectar estereotipos sociales en español argentino, y cómo influyen las estrategias de prompting y una evaluación culturalmente contextualizada en su desempeño?"
+    approach: "Evalué Llama-3-8B-Instruct y Qwen-3-8B mediante prompting conversacional y cuatro variantes de prompts adaptadas de CrowS-Pairs y de definiciones estándar de estereotipos. Comparé el desempeño de los modelos utilizando macro-F1, tasa de falsos positivos (FPR) y tasa de falsos negativos (FNR), prestando especial atención a las particularidades culturales argentinas y a los artefactos introducidos por la traducción."
+    result: "El modelo con mejor desempeño alcanzó un macro-F1 de 0,557. Los falsos positivos representaron una de las principales dificultades: los modelos tuvieron problemas para distinguir entre el refuerzo de un estereotipo y su cuestionamiento. Además, los artefactos de traducción presentes en benchmarks originalmente diseñados en inglés afectaron la confiabilidad de la evaluación."
+    tags: ["Python", "NLP", "LLMs", "Llama", "Qwen", "Hugging Face", "Macro-F1", "Evaluación de modelos", "Prompt Engineering"]
+    links:
+      - { label: "Leer el trabajo", url: "https://drive.google.com/file/d/1QGNZvtLcFufCLWbimweY88LqGOdbqnjB/view?usp=sharing" }
+      - { label: "Código", url: "https://gitlab.uni-hannover.de/mgaldo/bias-detection-in-argentine-spanish" }
+
+  - title: "Procesamiento y visualización de señales en estimulación cerebral"
+    meta: "Trabajo Profesional · Universidad de Buenos Aires · 2025 · Tutores: Lic. Andrés Juárez y Dr. Ing. Fernando Chaure"
+    question: "¿Cómo pueden procesarse y visualizarse señales electrofisiológicas asociadas a la estimulación cerebral para facilitar el análisis de la actividad cerebral y de las configuraciones de electrodos?"
+    approach: "Desarrollé un backend en Python para el procesamiento y análisis de señales electrofisiológicas, junto con una interfaz interactiva de visualización que permite explorar posiciones de electrodos en tres dimensiones. Apliqué técnicas de procesamiento de señales y herramientas de computación científica para facilitar la exploración de datos de estimulación cerebral."
+    result: "Desarrollé una herramienta integrada de procesamiento y visualización para explorar señales electrofisiológicas y configuraciones de electrodos, como apoyo a investigaciones relacionadas con la epilepsia y la estimulación cerebral."
+    tags: ["Python", "Procesamiento de señales", "Neurociencia", "NumPy", "SciPy", "MNE-Python", "PyQt5", "Visualización 3D"]
+    links:
+      - { label: "Leer el trabajo", url: "https://drive.google.com/file/d/1g9_Bw9n52mz7gi2kt-ouX-oJ9mAeQau7/view?usp=sharing" }
+      - { label: "Código", url: "https://github.com/shizus/trabajo-profesional-estimulacion-cerebral" }

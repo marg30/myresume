@@ -1,0 +1,97 @@
+intro: "Proyectos de software que podés explorar, ejecutar y revisar. Seleccioná una tecnología para filtrar los proyectos."
+
+items:
+  - id: kindleanki
+    title: "KindleAnki – Exportador de vocabulario de Kindle a Anki"
+    type: "Proyecto personal"
+    role: "Desarrolladora"
+    summary: "Aplicación desarrollada en Go que extrae el vocabulario guardado en Amazon Kindle y lo convierte en tarjetas compatibles con Anki. Lee la base de datos SQLite de Kindle, enriquece las entradas con definiciones de diccionario y las exporta en archivos TSV listos para importar en Anki."
+    highlights:
+      - "Desarrollé una aplicación en Go para leer y procesar los datos de vocabulario de la base SQLite de Kindle, incluyendo palabras, contexto de consulta e información de los libros."
+      - "Integré consultas al diccionario DWDS para obtener definiciones e información gramatical, utilizando parsing de HTML para extraer las entradas."
+      - "Implementé el enriquecimiento del vocabulario y la generación de notas estructuradas para Anki, incluyendo palabras, definiciones, categorías gramaticales, oraciones de ejemplo, traducciones y títulos de libros."
+      - "Desarrollé un exportador TSV para generar archivos compatibles con la función de importación de tarjetas de Anki."
+    skills_developed:
+      - "Desarrollo backend con Go"
+      - "Acceso a bases de datos SQLite"
+      - "Extracción y transformación de datos"
+      - "Integración con fuentes de datos externas"
+      - "Parsing de HTML y web scraping"
+      - "Generación y exportación de archivos"
+    languages: ["Go", "SQL"]
+    tools: ["SQLite", "DWDS", "goquery", "Anki", "Git"]
+    repo: "https://github.com/marg30/kindle-to-anki"
+
+
+  - id: argentine-spanish-bias
+    title: "Evaluación de la detección de sesgos en español argentino"
+    type: "Investigación académica"
+    year: "2025–2026"
+    role: "Investigadora – Proyecto durante intercambio académico"
+    summary: "Proyecto de investigación sobre los desafíos de detectar estereotipos sociales en español argentino mediante grandes modelos de lenguaje (LLMs). Evalué el comportamiento de distintos modelos utilizando benchmarks de sesgos traducidos y analicé cómo el idioma, el contexto cultural y los problemas de traducción afectan la detección."
+    highlights:
+      - "Evalué las capacidades de detección de estereotipos de grandes modelos de lenguaje en español argentino, utilizando datos adaptados del benchmark CrowS-Pairs."
+      - "Comparé Llama-3-8B-Instruct y Qwen-3-8B mediante cuatro variantes de prompts basadas en CrowS-Pairs y definiciones estándar de estereotipos."
+      - "Realicé evaluaciones cuantitativas utilizando macro-F1, tasa de falsos positivos (FPR) y tasa de falsos negativos (FNR), complementadas con análisis cualitativo de errores."
+      - "El modelo con mejor desempeño alcanzó un macro-F1 de 0,557. Los falsos positivos fueron una de las principales dificultades, especialmente al distinguir entre el refuerzo de un estereotipo y su cuestionamiento."
+    skills_developed:
+      - "Procesamiento del lenguaje natural"
+      - "Evaluación de grandes modelos de lenguaje"
+      - "Detección de sesgos y equidad en IA"
+      - "Adaptación y evaluación de datasets"
+      - "Análisis cuantitativo y cualitativo"
+      - "Investigación experimental"
+    languages: ["Python"]
+    tools: ["PyTorch", "Hugging Face", "Qwen", "Llama", "QLoRA", "Slurm", "Git", "LLM Fine-tuning (QLoRA)", "Prompt Engineering", "LLM Evaluation"]
+
+  - id: distributed-pipeline
+    title: "Sistema distribuido de procesamiento y monitoreo de procesos"
+    type: "Proyecto académico"
+    year: "2024"
+    role: "Desarrolladora – Proyecto grupal de Sistemas Distribuidos"
+    summary: "Sistema distribuido desarrollado en Python y Docker para procesar reseñas de videojuegos mediante múltiples servicios y procesos coordinados. Incluye mecanismos de comunicación, monitoreo de estado, detección de fallas y recuperación automática para mejorar la tolerancia a fallos del sistema."
+    highlights:
+      - "Desarrollé componentes de un pipeline de procesamiento distribuido con servicios de clientes, unión, filtrado y agregación de datos, utilizando Docker y Docker Compose."
+      - "Implementé mecanismos de comunicación entre procesos mediante RabbitMQ y verificaciones de estado (health checks) para detectar contenedores y procesos que habían dejado de funcionar."
+      - "Participé en el desarrollo de servicios de monitoreo (watchers) capaces de detectar fallas y reiniciar procesos o contenedores. Los propios watchers también eran monitoreados por otros procesos."
+      - "Trabajé en mecanismos de coordinación y consenso entre múltiples watchers para gestionar las tareas de recuperación."
+      - "Utilicé volúmenes, particionamiento de datos (sharding) y procesamiento paralelo para distribuir la carga. Una optimización del pipeline redujo el tiempo de ejecución de varias horas a aproximadamente una hora."
+      - "Configuré la orquestación de los componentes mediante Docker Compose y archivos YAML, junto con pipelines de GitLab CI/CD para construir imágenes y ejecutar pruebas."
+    skills_developed:
+      - "Diseño de sistemas distribuidos"
+      - "Comunicación entre procesos y sistemas de mensajería"
+      - "Monitoreo de servicios y health checks"
+      - "Detección de fallas y recuperación automática"
+      - "Tolerancia a fallos y coordinación entre procesos"
+      - "Consenso en sistemas distribuidos"
+      - "Procesamiento paralelo y particionamiento de datos"
+      - "Containerización y orquestación"
+      - "Optimización de rendimiento"
+      - "Integración continua"
+    languages: ["Python", "YAML"]
+    tools: ["RabbitMQ", "Docker", "Docker Compose", "Git"]
+    repo: "https://github.com/alejorodriguez96/7574-distribuidos-steam-analysis"
+
+
+  - id: music-recommendation
+    title: "API de recomendación musical"
+    type: "Proyecto académico"
+    role: "Desarrolladora backend - Proyecto grupal de Ingeniería de Software"
+    summary: "Servicio de recomendación musical desarrollado en Ruby, con PostgreSQL como base de datos y un bot de Telegram como interfaz de usuario. Combina distintos enfoques de recomendación, como filtrado colaborativo, filtrado basado en contenido, preferencias de usuarios e historial de escucha, con recomendaciones obtenidas ocasionalmente mediante la API de Spotify."
+    highlights:
+      - "Desarrollé el backend utilizando Sinatra y Sequel, con PostgreSQL para la persistencia de datos relacionales."
+      - "Implementé distintos enfoques de recomendación musical, incluyendo filtrado colaborativo, filtrado basado en contenido, preferencias de usuarios e historial de escucha."
+      - "Integré un bot de Telegram como interfaz de usuario y utilicé la API de Spotify para obtener recomendaciones de canciones en determinados casos."
+      - "Desarrollé tests automatizados con RSpec y Cucumber/Gherkin, utilizando WebMock para simular solicitudes HTTP."
+      - "Configuré herramientas de cobertura y calidad de código como SimpleCov y RuboCop, y automaticé tareas de desarrollo mediante Rake."
+      - "Preparé la configuración de Docker Compose para la ejecución en producción y documenté los procedimientos de despliegue en Heroku."
+    skills_developed:
+      - "Desarrollo de APIs backend"
+      - "Sistemas de recomendación"
+      - "Bases de datos relacionales"
+      - "Integración con APIs externas"
+      - "Testing automatizado"
+      - "Desarrollo guiado por comportamiento (BDD)"
+      - "Calidad y cobertura de código"
+    languages: ["Ruby", "SQL"]
+    tools: ["Sinatra", "Sequel", "PostgreSQL", "Telegram Bot API", "Spotify API", "Faraday", "RSpec", "Cucumber", "Gherkin", "WebMock", "SimpleCov", "RuboCop", "Rake", "Docker", "Docker Compose", "Kubernetes", "SemanticLogger", "GitLab CI/CD", "Git", "Behavior-Driven Development (BDD)", "Unit Testing", "Integration Testing"]

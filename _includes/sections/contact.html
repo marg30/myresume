@@ -1,0 +1,23 @@
+<section class="section" id="contact" aria-labelledby="h-contact">
+  <div class="wrap">
+    {% include sec_head.html id="contact" icon="mail" %}
+    <div class="card px contact-card reveal">
+      <h3 class="big">{{ ui.contact_title }}</h3>
+      <p class="lead">{{ about.availability }} · {{ about.tagline }}</p>
+
+      <div class="mail-row">
+        <a class="btn primary" href="mailto:{{ site.email }}">{% include icon.html name="envelope" %}<span>{{ site.email }}</span></a>
+        <button class="btn" id="copy-mail" type="button" data-email="{{ site.email }}">{% include icon.html name="copy" %}<span class="copy-label">{{ ui.copy_email }}</span></button>
+      </div>
+
+      <div class="find-me">
+        <span class="lbl">{{ ui.also_find_me }}</span>
+        <div class="link-row">
+          {% if site.linkedin_username and site.linkedin_username != "" %}<a class="btn small" href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener">{% include icon.html name="linkedin" %}<span>LinkedIn</span></a>{% endif %}
+          {% if site.github_username and site.github_username != "" %}<a class="btn small" href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">{% include icon.html name="github" %}<span>GitHub</span></a>{% endif %}
+          {% if about.cv_url and about.cv_url != "" %}<a class="btn small" href="{{ about.cv_url | relative_url }}" download>{% include icon.html name="download" %}<span>{{ ui.download_cv }}</span></a>{% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

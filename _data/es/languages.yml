@@ -1,0 +1,21 @@
+# EDITAR: idiomas que hablás, en su propia sección.
+# score: de 1 a 6 (6 = nativo). label: el nivel en palabras o MCER (A1-C2).
+
+intro: ""
+
+items:
+  - name: "Español"
+    label: "Nativo"
+    score: 6
+    note: ""
+  - name: "Inglés"
+    label: "C2 · Avanzado"
+    score: 5
+    note: "Uso diario para leer documentación, escribir y participar en reuniones. Certificados: Complete Advanced Certificate (2018),  First Certificate Exam (2016), Cambridge University."
+  - name: "Alemán"
+    label: "C1 · Avanzado"
+    score: 5
+    note: "Uso diario para leer documentación, escribir y participar en reuniones. Certificados: TestDAF (2026), DSD II Sprachdiplom, Die ZFA (2018)"
+  - name: "Coreano"
+    label: "B1 · Intermediate"
+    score: 3

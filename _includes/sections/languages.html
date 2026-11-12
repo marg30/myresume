@@ -1,0 +1,19 @@
+<section class="section" id="languages" aria-labelledby="h-languages">
+  <div class="wrap">
+    {% include sec_head.html id="languages" icon="globe" intro=D.languages.intro %}
+    <ul class="lang-list" role="list">
+      {% for l in D.languages.items %}
+      <li class="card px lang reveal c{{ forloop.index0 | modulo: 3 }}">
+        <div class="lang-head">
+          <h3>{{ l.name }}</h3>
+          <span class="lvl">{{ l.label }}</span>
+        </div>
+        <div class="seg-meter" role="img" aria-label="{{ l.name }}: {{ l.label }}">
+          {% for i in (1..6) %}<i{% if i <= l.score %} class="on"{% endif %}></i>{% endfor %}
+        </div>
+        {% if l.note and l.note != "" %}<p class="note">{{ l.note }}</p>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,108 @@
+intro: "Habilidades en desarrollo de software, programación backend, inteligencia artificial y automatización, adquiridas a través de experiencia profesional, investigación académica y proyectos personales."
+
+groups:
+  - title: "Lenguajes de programación"
+    items:
+      - { name: "Python", level: 3, icon: "python" }
+      - { name: "JavaScript", level: 3, icon: "javascript" }
+      - { name: "TypeScript", level: 3, icon: "typescript" }
+      - { name: "SQL", level: 3 }
+      - { name: "HTML & CSS", level: 3, icon: "html5" }
+      - { name: "C#", level: 2, icon: "csharp" }
+      - { name: "Go", level: 2, icon: "go" }
+      - { name: "PHP", level: 2, icon: "php" }
+      - { name: "Java", level: 2, icon: "java" }
+      - { name: "C/C++", level: 2, icon: "cplusplus" }
+      - { name: "Rust", level: 2, icon: "rust" }
+      - { name: "Kotlin", level: 2, icon: "kotlin" }
+      - { name: "Ruby", level: 2, icon: "ruby" }
+
+  - title: "Desarrollo backend y web"
+    items:
+      - { name: "Node.js", level: 3, icon: "nodejs" }
+      - { name: "React", level: 3, icon: "react" }
+      - { name: "WordPress", level: 3, icon: "wordpress" }
+      - { name: ".NET", level: 2, icon: "dotnet" }
+      - { name: "FastAPI", level: 2 }
+      - { name: "Flask", level: 2, icon: "flask" }
+      - { name: "Django", level: 2, icon: "django" }
+      - { name: "Gin (Go)", level: 2 }
+      - { name: "APIs REST", level: 3 }
+      - { name: "Vite", level: 2, icon: "vitejs" }
+      - { name: "PyQt5", level: 2 }
+
+  - title: "Inteligencia artificial y aprendizaje automático"
+    items:
+      - { name: "PyTorch", level: 2, icon: "pytorch" }
+      - { name: "Hugging Face", level: 2 }
+      - { name: "LangChain", level: 2 }
+      - { name: "Langflow", level: 2 }
+      - { name: "Ollama", level: 2 }
+      - { name: "CrewAI", level: 2 }
+      - { name: "Generación aumentada por recuperación (RAG)", level: 2 }
+      - { name: "Ajuste fino de LLMs (QLoRA)", level: 2 }
+      - { name: "Ingeniería de prompts", level: 2 }
+      - { name: "Evaluación de LLMs", level: 2 }
+      - { name: "scikit-learn", level: 2 }
+
+  - title: "Bases de datos y análisis de datos"
+    items:
+      - { name: "PostgreSQL", level: 2, icon: "postgresql" }
+      - { name: "SQLite", level: 3 }
+      - { name: "MongoDB", level: 2, icon: "mongodb" }
+      - { name: "DynamoDB", level: 2 }
+      - { name: "Chroma", level: 2 }
+      - { name: "pandas", level: 3, icon: "pandas" }
+      - { name: "NumPy", level: 3, icon: "numpy" }
+      - { name: "Matplotlib", level: 3 }
+      - { name: "Jupyter", level: 3, icon: "jupyter" }
+      - { name: "Tableau", level: 2 }
+      - { name: "Looker Studio", level: 2 }
+
+  - title: "Cloud, DevOps e infraestructura"
+    items:
+      - { name: "Git", level: 3, icon: "git" }
+      - { name: "Docker", level: 3, icon: "docker" }
+      - { name: "Docker Compose", level: 2 }
+      - { name: "Kubernetes", level: 2, icon: "kubernetes" }
+      - { name: "AWS", level: 2, icon: "amazonwebservices" }
+      - { name: "Amazon EC2", level: 2 }
+      - { name: "GitLab CI/CD", level: 2, icon: "gitlab" }
+      - { name: "GitHub Actions", level: 2, icon: "githubactions" }
+      - { name: "Azure Pipelines", level: 2, icon: "azuredevops" }
+      - { name: "Linux", level: 2, icon: "linux" }
+      - { name: "Bash", level: 2, icon: "bash" }
+      - { name: "Slurm", level: 2 }
+
+  - title: "Testing y calidad de software"
+    items:
+      - { name: "pytest", level: 3 }
+      - { name: "Cucumber", level: 2 }
+      - { name: "Gherkin", level: 2 }
+      - { name: "Desarrollo guiado por comportamiento (BDD)", level: 2 }
+      - { name: "Pruebas unitarias", level: 2 }
+      - { name: "Pruebas de integración", level: 2 }
+      - { name: "Vitest", level: 2 }
+      - { name: "Click", level: 2 }
+
+  - title: "Fundamentos de ingeniería de software"
+    items:
+      - { name: "Algoritmos y estructuras de datos", level: 3 }
+      - { name: "Programación orientada a objetos", level: 3 }
+      - { name: "Sistemas operativos", level: 3 }
+      - { name: "Sistemas distribuidos", level: 2 }
+      - { name: "Colas de mensajes y arquitecturas orientadas a eventos", level: 2 }
+      - { name: "Diseño de APIs", level: 2 }
+      - { name: "Redes de computadoras", level: 2 }
+      - { name: "Aprendizaje automático (Machine Learning)", level: 2 }
+      - { name: "Integración y entrega continuas (CI/CD)", level: 2 }
+
+  - title: "Colaboración y metodologías de trabajo"
+    items:
+      - { name: "Documentación técnica", level: 3 }
+      - { name: "Liderazgo técnico", level: 3 }
+      - { name: "Revisión de código", level: 2 }
+      - { name: "Metodologías ágiles / Scrum", level: 2 }
+      - { name: "Coordinación de proyectos", level: 3 }
+      - { name: "Colaboración interdisciplinaria", level: 3 }
+      - { name: "Trabajo remoto asincrónico", level: 3 }

@@ -1,0 +1,23 @@
+# EDIT: spoken languages, in their own section.
+#
+# score: 1 to 6 (6 = native). label: the level in words or CEFR (A1-C2).
+# Recruiter tip: for remote jobs, say how you use English (meetings, writing, daily work).
+
+intro: ""
+
+items:
+  - name: "Spanish"
+    label: "Native"
+    score: 6
+    note: ""
+  - name: "English"
+    label: "C2 · Advanced"
+    score: 6
+    note: "Daily use for reading documentation, writing and meetings. Certificates: Complete Advanced Certificate (2018),  First Certificate Exam (2016), Cambridge University."
+  - name: "German"
+    label: "C1 · Advanced"
+    score: 5
+    note: "Daily use for reading documentation, writing and meetings. Certificates: TestDAF (2026), DSD II Sprachdiplom, Die ZFA (2018)"
+  - name: "Korean"
+    label: "B1 · Intermediate"
+    score: 3

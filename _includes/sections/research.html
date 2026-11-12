@@ -1,0 +1,24 @@
+<section class="section" id="research" aria-labelledby="h-research">
+  <div class="wrap">
+    {% include sec_head.html id="research" icon="flask" intro=D.research.intro %}
+    <div class="research-list">
+      {% for r in D.research.items %}
+      <article class="card px paper reveal">
+        <p class="meta">{{ r.meta }}</p>
+        <h3>{{ r.title }}</h3>
+        <dl class="qa">
+          <div><dt>{{ ui.question }}</dt><dd>{{ r.question }}</dd></div>
+          <div><dt>{{ ui.approach }}</dt><dd>{{ r.approach }}</dd></div>
+          <div><dt>{{ ui.result }}</dt><dd>{{ r.result }}</dd></div>
+        </dl>
+        {% if r.tags %}<ul class="tags" role="list">{% for t in r.tags %}<li class="tag tool">{{ t }}</li>{% endfor %}</ul>{% endif %}
+        {% if r.links %}
+        <div class="links">
+          {% for k in r.links %}<a class="btn small{% if forloop.first %} primary{% endif %}" href="{{ k.url }}" target="_blank" rel="noopener">{% include icon.html name="arrow-up-right-from-square" %}<span>{{ k.label }}</span></a>{% endfor %}
+        </div>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,45 @@
+<section class="section" id="projects" aria-labelledby="h-projects">
+  <div class="wrap">
+    {% include sec_head.html id="projects" icon="laptop" intro=D.projects.intro %}
+
+    <div class="filters reveal" id="filters" hidden></div>
+    <p class="count reveal" id="count" aria-live="polite" hidden></p>
+
+    <div class="projects-grid">
+      {% for p in D.projects.items %}
+      <article class="project card px reveal" id="p-{{ p.id }}" data-tags="{% for t in p.languages %}{{ t | downcase }}|{% endfor %}{% for t in p.tools %}{{ t | downcase }}|{% endfor %}">
+        <div class="thumb">
+          {% if p.image and p.image != "" %}<img src="{{ p.image | relative_url }}" alt="" loading="lazy">{% else %}<canvas class="thumb-canvas" data-seed="{{ p.id }}" aria-hidden="true"></canvas>{% endif %}
+          <span class="badge">{{ p.type }}</span>
+        </div>
+        <div class="p-body">
+          <header class="p-head">
+            <h3>{{ p.title }}</h3>
+            <p class="meta"><span>{{ p.year }}</span><span>{{ p.role }}</span></p>
+          </header>
+          <p class="summary">{{ p.summary }}</p>
+          <ul class="bullets" role="list">
+            {% for h in p.highlights %}<li>{{ h | markdownify | remove: "<p>" | remove: "</p>" | strip }}</li>
+            {% endfor %}
+          </ul>
+
+          <div class="tagrow">
+            <span class="lbl">{{ ui.skills_developed }}</span>
+            <ul class="tags" role="list">{% for s in p.skills_developed %}<li class="tag learned">{{ s }}</li>{% endfor %}</ul>
+          </div>
+          <div class="tagrow">
+            <span class="lbl">{{ ui.built_with }}</span>
+            <ul class="tags" role="list">{% for t in p.languages %}<li class="tag lang"><button type="button" data-filter="{{ t | downcase }}">{{ t }}</button></li>{% endfor %}{% for t in p.tools %}<li class="tag tool"><button type="button" data-filter="{{ t | downcase }}">{{ t }}</button></li>{% endfor %}</ul>
+          </div>
+
+          <div class="links">
+            {% if p.repo and p.repo != "" %}<a class="btn small primary" href="{{ p.repo }}" target="_blank" rel="noopener">{% include icon.html name="github" %}<span>{{ ui.code }}</span></a>{% elsif p.private %}<span class="private">{{ ui.private_repo }}</span>{% endif %}
+            {% if p.demo and p.demo != "" %}<a class="btn small" href="{{ p.demo }}" target="_blank" rel="noopener">{% include icon.html name="arrow-up-right-from-square" %}<span>{{ ui.demo }}</span></a>{% endif %}
+            {% if p.case_study and p.case_study != "" %}<a class="btn small" href="{{ p.case_study }}" target="_blank" rel="noopener"><span>{{ ui.case_study }}</span></a>{% endif %}
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+job: "Ingeniera de Software Backend Junior"
+tagline: "Desarrolladora backend (Python, Go) con experiencia en automatización de pruebas, sistemas distribuidos e inteligencia artificial aplicada."
+availability: "Disponible para nuevas oportunidades"
+cv_url: ""
+
+summary:
+  - "Ingeniera en Informática graduada de la Universidad de Buenos Aires, con experiencia académica y profesional internacional en Alemania y España. Trabajé en desarrollo de software, automatización de pruebas, aplicaciones de inteligencia artificial e investigación, combinando una sólida formación en ciencias de la computación con experiencia práctica."
+  - "Me interesa diseñar y desarrollar software confiable, resolver problemas mediante la programación y seguir aprendiendo nuevas tecnologías. Mis principales áreas de interés son el desarrollo backend, los sistemas distribuidos y la inteligencia artificial aplicada, especialmente los grandes modelos de lenguaje y la automatización."
+
+facts:
+  - label: Roles buscados
+    value: "Backend / Software Engineer Junior · AI Engineer"
+  - label: Ubicación
+    value: "Buenos Aires, Argentina (UTC−3)"
+  - label: Modalidad
+    value: "Remoto, híbrido o presencial en Buenos Aires"
+  - label: Disponibilidad
+    value: "Abierta a oportunidades de tiempo completo"
+  - label: Idiomas
+    value: "Español (nativo) · Inglés (C2) · Alemán (C1)"
+
+looking_for:
+  - "Un puesto de desarrollo backend o ingeniería de software en el que pueda contribuir a construir aplicaciones y servicios confiables y mantenibles."
+  - "Oportunidades para trabajar con Python, Go, sistemas distribuidos, APIs y aplicaciones con uso intensivo de datos."
+  - "Equipos que valoren la calidad del código, los tests automatizados, la colaboración y el aprendizaje continuo."
+  - "Oportunidades para explorar la inteligencia artificial aplicada e integrar soluciones basadas en LLMs en productos reales."

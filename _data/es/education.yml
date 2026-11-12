@@ -1,0 +1,40 @@
+intro: "Ingeniera en Informática graduada de la Universidad de Buenos Aires, con experiencia académica internacional en Alemania y España. Formación sólida en ingeniería de software, ciencias de la computación e investigación en inteligencia artificial, con especial interés en el desarrollo backend y la aplicación de IA."
+
+items:
+  - degree: "Ingeniería en Informática (carrera de grado de 6 años)"
+    school: "Universidad de Buenos Aires (UBA)"
+    location: "Buenos Aires, Argentina"
+    date: "Abr. 2019 – 2026"
+    grade: "Promedio: 8/10"
+    thesis: "Procesamiento de señales y visualización en estimulación cerebral, bajo la dirección de Lic. Andrés Juárez y Dr. Ing. Fernando Chaure."
+    highlights:
+      - "Formación sólida en algoritmos, estructuras de datos, bases de datos, sistemas operativos, sistemas distribuidos e ingeniería de software."
+      - "Ayudante de cátedra en Sistemas Operativos (2024–2025), brindando acompañamiento académico y correcciones a estudiantes."
+    coursework:
+      - "Algoritmos y Estructuras de Datos"
+      - "Bases de Datos"
+      - "Sistemas Operativos"
+      - "Ingeniería de Software"
+      - "Sistemas Distribuidos"
+      - "Redes de Computadoras"
+      - "Aprendizaje Automático (Machine Learning)"
+      - "Desarrollo Ágil de Software"
+
+  - degree: "Intercambio académico – Ciencias de la Computación"
+    school: "Leibniz Universität Hannover (LUH)"
+    location: "Hannover, Alemania"
+    date: "Oct. 2025 – Feb. 2026"
+    highlights:
+      - "Becaria del Servicio Alemán de Intercambio Académico (DAAD)."
+      - "Proyecto de investigación: Evaluación de la detección de sesgos en español rioplatense."
+      - "Evaluación de modelos de lenguaje (LLMs) base y ajustados mediante fine-tuning para la detección de sesgos sociales en español rioplatense, combinando métricas cuantitativas con análisis cualitativo de errores."
+
+  - degree: "Intercambio académico – Ingeniería Informática"
+    school: "Universidad Carlos III de Madrid (UC3M)"
+    location: "Madrid, España"
+    date: "Feb. 2025 – Jun. 2025"
+    coursework:
+      - "Ciberseguridad"
+      - "Internet de las Cosas (IoT)"
+
+certifications: []

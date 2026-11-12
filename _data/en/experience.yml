@@ -1,0 +1,86 @@
+# EDIT: sample roles, newest first.
+#
+# Recruiter tip: if your jobs were not "software engineer", do not hide them.
+# Describe what you built or automated (numbers help) and fill "transferable" with
+# the engineering skills the job gave you: version control, SQL, debugging,
+# code review, working with users, documentation.
+
+intro: "My experience combines software development, AI research, test automation, and process optimization. I've worked in international and multidisciplinary teams, developing technical solutions and improving existing processes across different environments."
+
+items:
+  - role: "Software Development Intern – Test Automation"
+    company: "Philips Medizin Systeme Böblingen GmbH"
+    location: "Böblingen, Germany"
+    date: "Mar. 2026 – Aug. 2026"
+    highlights:
+      - "Developed and maintained automated tests for .NET applications using C#, Cucumber, and Gherkin, implementing Behavior-Driven Development (BDD) scenarios."
+      - "Worked with NATS.NET to consume messages from NATS queues, gaining hands-on experience with message-based communication and distributed, event-driven systems."
+      - "Contributed to automated testing workflows and CI/CD pipelines using Azure Pipelines."
+      - "Collaborated with an international Agile development team, working primarily in German."
+    transferable: "Software testing, .NET development, BDD, distributed systems, message queues, CI/CD, debugging, and Agile development."
+    tools: [".NET", "C#", "Cucumber", "Gherkin", "NATS.NET", "Azure Pipelines", "Git"]
+
+  - role: "AI and Software Development Intern"
+    company: "Center of New Technologies (CETEC), Universidad de Buenos Aires"
+    location: "Buenos Aires, Argentina"
+    date: "Sept. 2024 – Feb. 2025"
+    highlights:
+      - "Designed and implemented a Python API supporting multimodal Retrieval-Augmented Generation (RAG) applications."
+      - "Integrated and experimented with AI frameworks and tools, including Hugging Face, Ollama, Langflow, and CrewAI."
+      - "Collaborated with a multidisciplinary team to plan and deliver educational workshops, explaining advanced RAG concepts and practical AI applications."
+    transferable: "Backend development, API design, AI integration, technical documentation, collaboration, and communicating complex technical concepts."
+    tools: ["Python", "Hugging Face", "Ollama", "Langflow", "CrewAI", "RAG"]
+
+  - role: "Operating Systems Teaching Assistant"
+    company: "Universidad de Buenos Aires"
+    location: "Buenos Aires, Argentina"
+    date: "Mar. 2024 – Aug. 2025"
+    highlights:
+      - "Evaluated student assignments and projects related to Operating Systems, providing technical feedback and ensuring adherence to course requirements."
+      - "Supported students in understanding operating systems concepts and their practical implementation."
+      - "Strengthened technical knowledge through the analysis and evaluation of solutions involving fundamental operating systems concepts."
+    transferable: "Technical problem-solving, debugging, code evaluation, analytical thinking, technical communication, and mentoring."
+
+  - role: "LAC iXp Intern Committee Member"
+    company: "SAP"
+    location: "Buenos Aires, Argentina"
+    date: "Jan. 2022 – May 2022"
+    highlights:
+      - "Coordinated and organized monthly events focused on finance, career development, and coding for the intern community."
+      - "Contributed to the creation and distribution of a monthly newsletter, communicating upcoming events and relevant updates."
+      - "Collaborated with different teams to coordinate activities and improve engagement within the Latin America intern community."
+    transferable: "Project coordination, stakeholder communication, teamwork, event organization, and written communication."
+
+  - role: "Finance iXp Intern – Invoice Delivery"
+    company: "SAP"
+    location: "Buenos Aires, Argentina"
+    date: "Nov. 2020 – May 2022"
+    highlights:
+      - "Managed the distribution of invoices to clients and internal departments across Latin America, ensuring accurate and timely delivery."
+      - "Collaborated with Finance and Sales teams to investigate and resolve invoice-related discrepancies."
+      - "Identified and implemented process improvements that reduced invoice processing time by 50%, increasing operational efficiency across the LAC team."
+    transferable: "Process optimization, analytical thinking, stakeholder management, problem-solving, attention to detail, and cross-functional collaboration."
+
+  - role: "Team Lead – Bot Development (Volunteer)"
+    company: "BANGTAN ACADEMY"
+    location: "International Project · Remote"
+    date: "Feb. 2021 – Aug. 2023"
+    highlights:
+      - "Led an international volunteer team responsible for developing and maintaining Discord bots for a Korean language learning community."
+      - "Developed backend services using JavaScript, Node.js, and TypeScript."
+      - "Managed AWS infrastructure, using DynamoDB for database management and EC2 instances for application deployment."
+      - "Coordinated team activities and contributed to maintaining service availability and operational continuity."
+    transferable: "Backend development, cloud infrastructure, database management, application deployment, technical leadership, and international team coordination."
+    tools: ["JavaScript", "TypeScript", "Node.js", "AWS", "DynamoDB", "EC2", "Discord API"]
+
+  - role: "Team Lead – Web Development (Volunteer)"
+    company: "ALL FOR ARMY"
+    location: "International Project · Remote"
+    date: "Feb. 2020 – May 2021"
+    highlights:
+      - "Led an international volunteer team responsible for developing and maintaining two WordPress websites."
+      - "Developed custom pages and features using PHP, JavaScript, HTML, and CSS."
+      - "Implemented and customized plugins, themes, and backend logic to meet the project's requirements."
+      - "Coordinated the development team through task assignment, scheduling, and collaboration with designers during the planning and development stages."
+    transferable: "Full-stack web development, technical leadership, project management, international teamwork, and cross-functional collaboration."
+    tools: ["WordPress", "PHP", "JavaScript", "HTML", "CSS"]

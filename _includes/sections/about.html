@@ -1,0 +1,18 @@
+<section class="section" id="about" aria-labelledby="h-about">
+  <div class="wrap">
+    {% include sec_head.html id="about" icon="user" %}
+    <div class="about-grid">
+      <div class="card px reveal about-text">
+        {% for para in about.summary %}<p>{{ para | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+        {% endfor %}
+      </div>
+      <aside class="card px reveal about-wants" aria-labelledby="h-wants">
+        <h3 id="h-wants">{{ ui.looking_for }}</h3>
+        <ul class="bullets" role="list">
+          {% for item in about.looking_for %}<li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>

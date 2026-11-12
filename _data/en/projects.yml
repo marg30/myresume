@@ -1,0 +1,116 @@
+# EDIT: sample projects. Keep 3 to 5 of your best ones, newest first.
+#
+# Recruiter tip: for every project say (1) the problem, (2) what YOU did,
+# (3) one number, (4) which skills and tools it shows. Link the GitHub repo and,
+# if you can, a live demo. The README of each repo should have a screenshot,
+# setup steps and how to run the tests.
+#
+# Fields
+#   id                 short unique name, no spaces
+#   title, type, year  type examples: Personal project, Academic project, Open source, Work project
+#   role               what you did ("Solo developer", "Backend developer in a team of 4")
+#   summary            one or two sentences about the problem and the result
+#   highlights         2 to 4 bullets with concrete outcomes ("**bold**" and links work)
+#   skills_developed   what you learned or practised (skills, not tools)
+#   languages, tools   exact names. They power the filters and the skill counters.
+#   repo, demo, case_study   links (leave out what you do not have)
+#   private: true      shows "private code" instead of a GitHub button
+#   image              optional screenshot, e.g. /assets/img/taskflow.png (otherwise a pixel scene is drawn)
+
+intro: "Code you can run, read and review. Click a technology to filter."
+
+items:
+  - id: kindleanki
+    title: "KindleAnki – Kindle Vocabulary to Anki Exporter"
+    type: "Personal project"
+    year: "2026"
+    role: "Developer"
+    summary: "A Go application that extracts vocabulary saved by Amazon Kindle and converts it into Anki-compatible flashcards. It reads Kindle's SQLite vocabulary database, enriches entries with dictionary definitions, and exports them as TSV files for easy import into Anki."
+    highlights:
+      - "Developed a Go application to read and process vocabulary data from Kindle's SQLite database, including words, lookup context, and book information."
+      - "Integrated DWDS dictionary lookup to retrieve word definitions and grammatical information, using HTML parsing to extract dictionary entries."
+      - "Implemented vocabulary enrichment and structured Anki note generation, including words, definitions, parts of speech, example sentences, translations, and book titles."
+      - "Built a TSV exporter to generate files compatible with Anki's flashcard import functionality."
+    skills_developed:
+      - "Backend development with Go"
+      - "SQLite database access"
+      - "Data extraction and transformation"
+      - "External data integration"
+      - "HTML parsing and web scraping"
+      - "File generation and export"
+    languages: ["Go", "SQL"]
+    tools: ["SQLite", "DWDS", "goquery", "Anki", "Git"]
+    repo: "https://github.com/marg30/kindle-to-anki"
+
+  - id: argentine-spanish-bias
+    title: "Assessing Bias Detection in Argentine Spanish"
+    type: "Academic research"
+    year: "2025–2026"
+    role: "Researcher – Exchange semester project"
+    summary: "A research project investigating the challenges of detecting social biases in Argentine Spanish using large language models. Evaluated model behavior on translated bias benchmarks and analyzed how language, cultural context, and translation affect bias detection."
+    highlights:
+      - "Evaluated large language models on bias detection tasks involving Argentine Spanish, using translated benchmark data based on CrowS-Pairs."
+      - "Compared base and fine-tuned model variants, including Qwen and Llama models, to investigate their performance on bias detection."
+      - "Conducted quantitative evaluations and qualitative error analysis, examining false positives and model behavior on anti-stereotypical examples."
+      - "Worked with fine-tuning and experimentation workflows using QLoRA and Slurm-based research infrastructure."
+    skills_developed:
+      - "Natural language processing"
+      - "Large language model evaluation"
+      - "Bias detection and fairness"
+      - "Dataset adaptation and evaluation"
+      - "Quantitative and qualitative analysis"
+      - "Experimental research"
+    languages: ["Python"]
+    tools: ["PyTorch", "Hugging Face", "Qwen", "Llama", "QLoRA", "Slurm", "Git", "LLM Fine-tuning (QLoRA)", "Prompt Engineering", "LLM Evaluation"]
+
+  - id: distributed-pipeline
+    title: "Distributed Processing and Process Monitoring System"
+    type: "Academic Project"
+    year: "2024"
+    role: "Developer – Distributed Systems Team Project"
+    summary: "A distributed system built with Python and Docker to process video game reviews through multiple coordinated services and processes. It includes inter-process communication, health monitoring, failure detection, and automatic recovery mechanisms to improve system fault tolerance."
+    highlights:
+      - "Developed components of a distributed data-processing pipeline involving client, join, filtering, and aggregation services, using Docker and Docker Compose."
+      - "Implemented inter-process communication using RabbitMQ and health checks to detect unavailable containers and processes."
+      - "Worked on monitoring services (watchers) capable of detecting failures and restarting processes or containers. The watchers themselves were also monitored by other processes."
+      - "Contributed to coordination and consensus mechanisms among multiple watchers to manage recovery operations."
+      - "Used volumes, data partitioning (sharding), and parallel processing to distribute workloads. An optimization to the pipeline reduced execution time from several hours to approximately one hour."
+      - "Configured component orchestration using Docker Compose and YAML files, along with GitLab CI/CD pipelines to build images and run tests."
+    skills_developed:
+      - "Distributed systems design"
+      - "Inter-process communication and message queues"
+      - "Service monitoring and health checks"
+      - "Failure detection and automatic recovery"
+      - "Fault tolerance and process coordination"
+      - "Consensus in distributed systems"
+      - "Parallel processing and data partitioning"
+      - "Containerization and orchestration"
+      - "Performance optimization"
+      - "Continuous integration"
+    languages: ["Python", "YAML"]
+    tools: ["RabbitMQ", "Docker", "Docker Compose", "Git"]
+    repo: "https://github.com/alejorodriguez96/7574-distribuidos-steam-analysis"
+
+  - id: music-recommendation
+    title: "Music Recommendation API"
+    type: "Academic project"
+    year: "2024"
+    role: "Backend developer - Software Engineering team project"
+    summary: "A Ruby-based music recommendation service backed by PostgreSQL and accessible through a Telegram bot. Combined collaborative and content-based recommendation approaches with user preferences, listening history, and occasional Spotify API recommendations."
+    highlights:
+      - "Built the backend using Sinatra and Sequel, with PostgreSQL for relational data persistence."
+      - "Implemented multiple recommendation approaches, including collaborative filtering, content-based filtering, user preferences, and listening history."
+      - "Integrated a Telegram bot as the user-facing interface and used the Spotify API to retrieve song recommendations in selected cases."
+      - "Developed automated tests using RSpec and Cucumber/Gherkin, with WebMock for testing HTTP interactions."
+      - "Configured code coverage and code-quality tooling with SimpleCov and RuboCop, and automated development tasks with Rake."
+      - "Prepared Docker Compose configuration for production-style execution and documented Heroku deployment procedures."
+    skills_developed:
+      - "Backend API development"
+      - "Recommendation systems"
+      - "Relational databases"
+      - "External API integration"
+      - "Automated testing"
+      - "Behavior-driven development"
+      - "Code quality and coverage"
+    languages: ["Ruby", "SQL"]
+    tools: ["Sinatra", "Sequel", "PostgreSQL", "Telegram Bot API", "Spotify API", "Faraday", "RSpec", "Cucumber", "Gherkin", "WebMock", "SimpleCov", "RuboCop", "Rake", "Docker", "Docker Compose", "Kubernetes", "SemanticLogger", "GitLab CI/CD", "Git", "Behavior-Driven Development (BDD)", "Unit Testing", "Integration Testing"]

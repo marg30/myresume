@@ -1,0 +1,118 @@
+# EDIT: only list what you can discuss in an interview.
+#
+# level: 1 = learning · 2 = working knowledge · 3 = confident
+#
+# The "Used in N projects" counter is calculated automatically by matching the
+# skill name with the "languages" and "tools" of your projects, so spell them the
+# same way. Skills that match no project are shown without a counter.
+# icon (optional) is a name from https://devicon.dev, for example "python" or "react".
+
+# intro: "Grouped by what they are for. The counter shows in how many of my projects I used each one."
+
+intro: "A combination of software engineering, backend development, AI, and automation skills, developed through professional experience, academic research, and personal projects. The counter shows in how many of my projects I used each one."
+
+groups:
+  - title: "Programming languages"
+    items:
+      - { name: "Python", level: 3, icon: "python" }
+      - { name: "JavaScript", level: 3, icon: "javascript" }
+      - { name: "TypeScript", level: 3, icon: "typescript" }
+      - { name: "SQL", level: 3 }
+      - { name: "HTML & CSS", level: 3, icon: "html5" }
+      - { name: "C#", level: 2, icon: "csharp" }
+      - { name: "Go", level: 2, icon: "go" }
+      - { name: "PHP", level: 2, icon: "php" }
+      - { name: "Java", level: 2, icon: "java" }
+      - { name: "C/C++", level: 2, icon: "cplusplus" }
+      - { name: "Rust", level: 2, icon: "rust" }
+      - { name: "Kotlin", level: 2, icon: "kotlin" }
+      - { name: "Ruby", level: 2, icon: "ruby" }
+
+  - title: "Backend and web development"
+    items:
+      - { name: "Node.js", level: 3, icon: "nodejs" }
+      - { name: "React", level: 2, icon: "react" }
+      - { name: "WordPress", level: 2, icon: "wordpress" }
+      - { name: ".NET", level: 2, icon: "dotnet" }
+      - { name: "FastAPI", level: 2 }
+      - { name: "Flask", level: 2, icon: "flask" }
+      - { name: "Django", level: 2, icon: "django" }
+      - { name: "Gin (Go)", level: 2 }
+      - { name: "REST APIs", level: 3 }
+      - { name: "Vite", level: 2, icon: "vitejs" }
+      - { name: "PyQt5", level: 2 }
+
+  - title: "AI and machine learning"
+    items:
+      - { name: "PyTorch", level: 2, icon: "pytorch" }
+      - { name: "Hugging Face", level: 2 }
+      - { name: "LangChain", level: 2 }
+      - { name: "Langflow", level: 2 }
+      - { name: "Ollama", level: 2 }
+      - { name: "CrewAI", level: 2 }
+      - { name: "Retrieval-Augmented Generation (RAG)", level: 2 }
+      - { name: "LLM Fine-tuning (QLoRA)", level: 2 }
+      - { name: "Prompt Engineering", level: 2 }
+      - { name: "LLM Evaluation", level: 2 }
+      - { name: "scikit-learn", level: 2 }
+
+  - title: "Databases and data analysis"
+    items:
+      - { name: "PostgreSQL", level: 2, icon: "postgresql" }
+      - { name: "SQLite", level: 3 }
+      - { name: "MongoDB", level: 3, icon: "mongodb" }
+      - { name: "DynamoDB", level: 2 }
+      - { name: "Chroma", level: 2 }
+      - { name: "pandas", level: 3, icon: "pandas" }
+      - { name: "NumPy", level: 3, icon: "numpy" }
+      - { name: "Matplotlib", level: 3 }
+      - { name: "Jupyter", level: 3, icon: "jupyter" }
+      - { name: "Tableau", level: 2 }
+      - { name: "Looker Studio", level: 2 }
+
+  - title: "Cloud, DevOps and infrastructure"
+    items:
+      - { name: "Git", level: 3, icon: "git" }
+      - { name: "Docker", level: 3, icon: "docker" }
+      - { name: "Docker Compose", level: 2 }
+      - { name: "Kubernetes", level: 2, icon: "kubernetes" }
+      - { name: "AWS", level: 2, icon: "amazonwebservices" }
+      - { name: "Amazon EC2", level: 2 }
+      - { name: "GitLab CI/CD", level: 2, icon: "gitlab" }
+      - { name: "GitHub Actions", level: 2, icon: "githubactions" }
+      - { name: "Azure Pipelines", level: 2, icon: "azuredevops" }
+      - { name: "Linux", level: 2, icon: "linux" }
+      - { name: "Bash", level: 2, icon: "bash" }
+      - { name: "Slurm", level: 2 }
+
+  - title: "Testing and software quality"
+    items:
+      - { name: "pytest", level: 3 }
+      - { name: "Cucumber", level: 3 }
+      - { name: "Gherkin", level: 3 }
+      - { name: "Behavior-Driven Development (BDD)", level: 3 }
+      - { name: "Unit Testing", level: 3 }
+      - { name: "Integration Testing", level: 2 }
+      - { name: "Click", level: 1 }
+
+  - title: "Software engineering concepts"
+    items:
+      - { name: "Algorithms and Data Structures", level: 3 }
+      - { name: "Object-Oriented Programming", level: 3 }
+      - { name: "Operating Systems", level: 3 }
+      - { name: "Distributed Systems", level: 2 }
+      - { name: "Message Queues and Event-Driven Architecture", level: 2 }
+      - { name: "API Design", level: 2 }
+      - { name: "Computer Networks", level: 2 }
+      - { name: "Machine Learning", level: 2 }
+      - { name: "CI/CD", level: 2 }
+
+  - title: "Collaboration and methodologies"
+    items:
+      - { name: "Technical Documentation", level: 3 }
+      - { name: "Technical Leadership", level: 2 }
+      - { name: "Code Review", level: 2 }
+      - { name: "Agile / Scrum", level: 2 }
+      - { name: "Project Coordination", level: 3 }
+      - { name: "Cross-functional Collaboration", level: 3 }
+      - { name: "Asynchronous Remote Work", level: 3 }

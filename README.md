@@ -1,180 +1,126 @@
-[![CI](https://img.shields.io/badge/Github%20Pages-passing-gold.svg?logo=github)](ci)
-[![License: MIT](https://img.shields.io/badge/License-MIT-orange.svg)](https://opensource.org/licenses/MIT)
-[![Jekyll](https://img.shields.io/badge/jekyll-%3E%3D%203.9-green.svg)](https://jekyllrb.com/)
-[![Jekyll](https://img.shields.io/badge/gem%20version-3.2.33-blue.svg)](gem)
-<a href="https://jekyll-themes.com/byanko55/jekyll-professional-resume">
-  <img
-    src="https://img.shields.io/badge/featured%20on-JT-red.svg"
-    height="20"
-    alt="Jekyll Themes Shield"
-  />
-</a>
+# Blue Hour Portfolio
 
-# 🎓 - Jekyll Professional Resume
+A bilingual (English / Spanish) Jekyll portfolio for a software engineer. It keeps the structure of
+[jekyll-professional-resume](https://github.com/byanko55/jekyll-professional-resume) (profile
+introduction with contact icons, one data file per section, switchable color themes, side navigation)
+and gives it a pixel-art twilight look with a few interactions.
 
-A simple and modern resume template, best fit for either **Academic CV (Curriculum Vitae)** or **Engineer Portfolio**.
+Everything you see is sample text. You only edit **text files**, never the HTML.
 
-Live demo is available [here](https://byanko55.github.io/resume-demo/).
+---
 
-![demo](https://i.ibb.co/HYshYc0/231232121.webp)
+## 1. Run it on your computer
 
-## Setup
-Fork [this repository](https://github.com/byanko55/jekyll-professional-resume) or download the [source](https://github.com/byanko55/jekyll-professional-resume/releases) as a zip.
+You need Ruby 3.x and Bundler.
 
-**Rename your repository as USERNAME.github.io or anything else.**
-
-If you choose the former, then your URL will be https://USERNAME.github.io/.
-
-Otherwise (let's say `myresume`), you need to edit the '*baseurl*' parameter in `_config.yml`. In this case, the resume page will be served to "https://USERNAME.github.io/myresume/".
-
-```yml
-# set baseurl as "/<repo-name>". ex) baseurl: /myresume
-baseurl: myresume/
+```bash
+bundle install
+bundle exec jekyll serve --livereload
 ```
 
+Open http://localhost:4000. Every time you save a file the page refreshes.
+(Spanish version: http://localhost:4000/es/)
 
-### Update Profile
-In `_config.yml`, you can modify personal info such as your *photo, phone number, email*, and other social accounts. 
+---
 
-```yml
-profile_img: assets/img/profile.webp
-icon_img: assets/img/icon.webp
+## 2. Fill in your information
 
-name: "Your Name Here"
-job: "〈Your Job Here〉"
+| What | File |
+|---|---|
+| Name, photo, email, phone, LinkedIn, GitHub, site address | `_config.yml` |
+| Job title, tagline, "At a glance" facts, summary, what you look for | `_data/en/about.yml` |
+| Projects (GitHub repo, skills developed, tools, languages) | `_data/en/projects.yml` |
+| Work experience | `_data/en/experience.yml` |
+| Skills with levels | `_data/en/skills.yml` |
+| Education and certifications | `_data/en/education.yml` |
+| Spoken languages (own section) | `_data/en/languages.yml` |
+| Research project | `_data/en/research.yml` |
+| Buttons and labels | `_data/ui.yml` |
 
-phone_number: 012-345-6789
-address: City, Country
-email: email@example.com
-linkedin_username: linkedin
-github_username: github
-...
+The Spanish texts are the same files inside `_data/es/`.
+Each file starts with comments that explain the fields and give tips for recruiters.
 
-```
+**Photo:** put a square picture in `assets/img/` (for example `me.jpg`) and set `profile_img: /assets/img/me.jpg` in `_config.yml`.
 
-### Create a Topic
+**CV download button:** put your PDF in `assets/cv/` and write its path in `cv_url` inside `about.yml`
+(for example `/assets/cv/Your-Name-CV-EN.pdf`). Leave it empty and the button is hidden.
 
-All resume information should be placed in a directory named '`_data`'. You may need to manage personal data in separate groups, making a *Yaml* (`.yml`) file for each subject.
+**Project screenshot:** add `image: /assets/img/taskflow.png` to a project. Without it, a small pixel scene is drawn for that project.
 
-```
-._data
-├── SUBJECT1.yml
-├── SUBJECT2.yml
-├── SUBJECT3.yml
-...
+### How the skill counters work
+In `skills.yml`, each skill shows "×N" = in how many projects it appears. The match is made by name
+with the `languages` and `tools` lists of `projects.yml`, so write them the same way (`PostgreSQL`, not `Postgres`).
+Clicking a skill, or a technology tag inside a project, filters the project list.
 
-```
+---
 
-For instance,
+## 3. Order and sections
 
-```
-._data
-├── Awards.yml
-├── Education.yml
-├── Experience.yml
-├── Languages.yml
-├── Projects.yml
-├── Publications.yml
-├── Skills.yml
-```
+In `_config.yml`, the list `sections:` controls what appears and in which order. Delete a line to hide a
+section. If you are changing careers, keep `projects` above `experience` so people see your code first.
 
-### Fill your infomation
+Languages and Education are separate sections (`languages` and `education`).
 
-Open the *Yaml* file which you created right before. Add the following materials inside of the file.
+## 4. Languages of the site
 
-* **subject**: title of a subject
-* **listing-order**: determines the display order (from top to bottom)
-* **icon**: representative icon to be displayed (pick out from `resources/svgs`)
-* **contents**: The details of each item, listed in `KEY`-`VALUE` pairs 
+- English lives at `/` (file `index.html` + `_data/en/`).
+- Spanish lives at `/es/` (file `es/index.html` + `_data/es/`).
+- To add another language, copy `es/` and `_data/es/` to a new code, translate, and add it to `languages:` in `_config.yml`
+  plus a block of texts in `_data/ui.yml`.
+- English only: delete the `es` entry in `languages:`, the `es/` folder and `_data/es/`.
 
-```yml
-subject:
-listing-order:
-icon:
-contents:
-  - title: ITEM 1
-    KEY: VALUE
-    KEY: VALUE
-    ...
-  - title: ITEM 2
-    KEY: VALUE
-    ...
-```
+## 5. Themes
 
-For a better understanding, see the example below.
+Three themes are included and visitors can switch them with the colored squares in the top bar:
+**Blue Hour** (default), **Daybreak** (light) and **Midnight**.
+The colors are plain variables at the top of `assets/css/main.css`. Change `default_theme` in `_config.yml`
+to start with another one. To create a new theme, copy a `:root[data-theme="..."]` block, rename it,
+change the colors and add `{ id, label }` to `themes:` in `_config.yml`.
+The pixel sky also reads these colors (`--sky-1` to `--win`).
 
-```yml
-subject: Education
-listing-order: 1
-icon: "/assets/img/graduation-cap.svg"
-contents:
-  - title: Stanfort University, MA in Computer Science
-    description:
-      - Development of algorithms for tracking the facial expressions
-      - Optimizing parameter efficient fine tuning for fairness
-    grade: "**GPA**: `4.1/4.3`"
-    date: Mar. 2014 - Feb. 2016
-  ...
+## 6. Publish with GitHub Pages
 
-```
+1. Create a repository named `YOUR-USERNAME.github.io` and upload these files.
+   (Any other name works too: then set `baseurl: "/repo-name"` in `_config.yml`.)
+2. In the repository go to **Settings → Pages → Source** and choose **GitHub Actions**.
+3. Push to the `main` branch. The workflow in `.github/workflows/pages.yml` builds and publishes the site.
+4. Set `url: "https://YOUR-USERNAME.github.io"` in `_config.yml`.
 
-The rendered output looks like this:
+---
 
-![example1](https://i.ibb.co/9TGKPrv/123312.webp)
+## 7. Checklist before you send the link to recruiters
 
-See also the advanced example. 
+- [ ] First screen: job title says the role and 2 main technologies. "At a glance" is true and current.
+- [ ] 3 to 5 projects, newest first. Each one has a GitHub link, one number, and what **you** did.
+- [ ] Every GitHub repo has a README with a screenshot, how to run it and how to run the tests.
+- [ ] Experience in non-software jobs: filled "Relevant to software engineering" for each.
+- [ ] No placeholder left (search the files for `[`, `Your Name`, `example.com`, `your-username`).
+- [ ] CV PDF uploaded and the button works. The same job title appears on LinkedIn.
+- [ ] Open the site on your phone and in both languages. Print it once (Ctrl+P): it prints as a clean one-column resume.
+- [ ] Ask a friend to read the first screen for 10 seconds and tell you what you do.
 
-> **Important**: You can use markdown syntax to **apply text bold, italic, and underlined** effects or **create HTML elements** (including image, links, span, etc.)!
+---
 
-```yml
-subject: Projects
-listing-order: 3
-icon: "/assets/img/clipboard-list.svg"
-contents:
-  - title: "ChatPPT ([https://chat.opena1.com/](https://chat.openai.com/))"
-    description: 
-      - Chatbot developed based on a large language model
-      - Designed Generative algorithm to generate novel human-like content
-      - "Technology Used: Rust, Typescript, Python, Ruby"
-    image: "![](https://i.ibb.co/hX2wYLB/231321.webp)"
-  ...
+## What is inside
 
 ```
-
-![example](https://i.ibb.co/tCNCyYr/231321.webp)
-
-## Build from Gem package
-
-If you don't like the above setup option (clone/fork the original github repo), then you can also build your site by installing the gem package remotely. Read this altenative [guide](https://github.com/byanko55/jekyll-professional-resume/blob/master/docs/Installation%20from%20package.md).
-
-## Customizing
-
-### Change Color Palette
-Wanna pick another color? You can edit the base theme palette in `assets/css/style.scss`.
-```css
-:root {
-    --color-background: #fffdfb;
-    --theme1-light: #F6D8CB;
-    --theme1-medium: #D0A694;
-    --theme1-dim: #B07D67;
-    --theme1-dark: #8A5843;
-    --theme2-light: #B1B1C2;
-    ...
-
-}
+_config.yml            site settings
+_data/                 all your texts (en/, es/, ui.yml)
+_layouts/home.html     page skeleton (introduction, navigation)
+_includes/sections/    one template per section
+assets/css/main.css    themes and pixel styling
+assets/js/main.js      theme switch, filters, slide-in, copy email
+assets/js/sky.js       the animated pixel sky
 ```
 
-### Site Shortcut Icon
-To replace the shortcut icon displayed on browser tab, modify *icon_img* field in `_config.yml`.
-![shortcut](https://i.ibb.co/g9cYjRj/213213214.webp)
+Accessibility and recruiters: all text is real HTML (readable by screen readers and application-tracking
+systems), animations stop if the visitor prefers reduced motion, the page works without JavaScript,
+and it has structured data (schema.org Person) and English/Spanish `hreflang` links for search engines.
 
-```yml
-icon_img: "<IMAGE URL/PATH>"
-```
+## Credits and licenses
 
-## Contribution
-If you would like to report a bug or request a new feature, please open [an issue](https://github.com/byanko55/jekyll-professional-resume/issues) We are open to any kind of feedback or collaboration.
-<br></br>
-
-## License
-© 2024 *Yankos*. This theme is available as open source under the terms of the [MIT License](https://opensource.org/license/mit/).
+- Structure and idea: [jekyll-professional-resume](https://github.com/byanko55/jekyll-professional-resume) by Yankos (MIT). See `LICENSE`.
+- Contact and button icons: Font Awesome Free (CC BY 4.0). See `assets/img/ICONS-LICENSE.txt`.
+- Fonts from Google Fonts: Pixelify Sans, Nunito, Silkscreen (SIL Open Font License).
+- Technology logos (optional): [devicon](https://devicon.dev) (MIT), loaded from a CDN.
+- Pixel portrait, favicon, sky scene and styling: original to this project.

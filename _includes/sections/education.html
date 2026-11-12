@@ -1,0 +1,44 @@
+<section class="section" id="education" aria-labelledby="h-education">
+  <div class="wrap">
+    {% include sec_head.html id="education" icon="cap" intro=D.education.intro %}
+
+    <div class="edu-list">
+      {% for e in D.education.items %}
+      <article class="card px edu reveal">
+        <header class="e-head">
+          <div>
+            <h3>{{ e.degree }}</h3>
+            <p class="org">{{ e.school }}{% if e.location and e.location != "" %} · {{ e.location }}{% endif %}</p>
+          </div>
+          <p class="date">{{ e.date }}</p>
+        </header>
+        {% if e.grade and e.grade != "" %}<p class="grade">{{ e.grade }}</p>{% endif %}
+        {% if e.thesis and e.thesis != "" %}<p class="thesis"><span class="lbl">{{ ui.thesis }}</span> {{ e.thesis }}</p>{% endif %}
+        {% if e.highlights %}
+        <ul class="bullets" role="list">
+          {% for h in e.highlights %}<li>{{ h | markdownify | remove: "<p>" | remove: "</p>" | strip }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        {% if e.coursework %}
+        <div class="tagrow"><span class="lbl">{{ ui.coursework }}</span>
+          <ul class="tags" role="list">{% for c in e.coursework %}<li class="tag learned">{{ c }}</li>{% endfor %}</ul>
+        </div>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+
+    {% if D.education.certifications %}
+    <h3 class="sub-head reveal">{{ ui.certifications }}</h3>
+    <ul class="cert-list" role="list">
+      {% for c in D.education.certifications %}
+      <li class="card px cert reveal">
+        <p class="c-name">{% if c.url and c.url != "" %}<a href="{{ c.url }}" target="_blank" rel="noopener">{{ c.name }}</a>{% else %}{{ c.name }}{% endif %}</p>
+        <p class="c-meta">{{ c.issuer }} · {{ c.date }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</section>

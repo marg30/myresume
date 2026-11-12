@@ -1,0 +1,37 @@
+{%- assign P = D.projects.items -%}
+<section class="section" id="skills" aria-labelledby="h-skills">
+  <div class="wrap">
+    {% include sec_head.html id="skills" icon="bolt" intro=D.skills.intro %}
+
+    <div class="legend reveal" role="group" aria-label="{{ ui.legend }}">
+      <span class="lbl">{{ ui.legend }}</span>
+      <span class="lg"><span class="pips lv1" aria-hidden="true"><b></b><b></b><b></b></span>{{ ui.level_1 }}</span>
+      <span class="lg"><span class="pips lv2" aria-hidden="true"><b></b><b></b><b></b></span>{{ ui.level_2 }}</span>
+      <span class="lg"><span class="pips lv3" aria-hidden="true"><b></b><b></b><b></b></span>{{ ui.level_3 }}</span>
+      <span class="hint">{{ ui.click_to_filter }}</span>
+    </div>
+
+    <div class="skill-groups">
+      {% for g in D.skills.groups %}
+      <div class="card px skill-group reveal">
+        <h3>{{ g.title }}</h3>
+        <ul class="skill-list" role="list">
+          {% for s in g.items %}
+            {%- assign n = 0 -%}
+            {%- for p in P -%}{%- if p.languages contains s.name or p.tools contains s.name -%}{%- assign n = n | plus: 1 -%}{%- endif -%}{%- endfor -%}
+            {%- assign lv = "level_" | append: s.level -%}
+            {%- capture inner -%}
+              {% if s.icon and s.icon != "" %}<img class="devicon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/{{ s.icon }}/{{ s.icon }}-original.svg" alt="" width="20" height="20" loading="lazy">{% endif %}
+              <span class="s-name">{{ s.name }}</span>
+              <span class="pips lv{{ s.level }}" aria-hidden="true"><b></b><b></b><b></b></span>
+              <span class="sr">{{ ui[lv] }}</span>
+              {% if n > 0 %}<span class="count-badge" title="{{ ui.used_in }} {{ n }}">×{{ n }}</span><span class="sr">{{ ui.used_in }} {{ n }}</span>{% endif %}
+            {%- endcapture -%}
+            <li>{% if n > 0 %}<button type="button" class="skill" data-filter="{{ s.name | downcase }}">{{ inner }}</button>{% else %}<span class="skill static">{{ inner }}</span>{% endif %}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

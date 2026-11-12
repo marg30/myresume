@@ -1,0 +1,111 @@
+# Interface texts for each language. Edit freely.
+en:
+  skip: Skip to content
+  nav: Sections
+  language: Language
+  theme: Theme
+  sections:
+    about: About
+    projects: Projects
+    experience: Experience
+    skills: Skills
+    education: Education
+    languages: Languages
+    research: Research
+    contact: Contact
+  photo_alt: "Photo of"
+  at_a_glance: At a glance
+  contact_me: Contact me
+  download_cv: Download CV
+  looking_for: What I'm looking for
+  built_with: Built with
+  skills_developed: Skills developed
+  my_role: My role
+  code: Code on GitHub
+  demo: Live demo
+  case_study: Case study
+  private_repo: Private code (company project)
+  filter_label: Filter projects by technology
+  filter_all: All
+  showing: Showing
+  of: of
+  projects_word: projects
+  used_in: Used in
+  project_one: project
+  project_many: projects
+  legend: Skill level
+  level_1: Learning
+  level_2: Working knowledge
+  level_3: Confident
+  click_to_filter: Click a skill to filter the projects.
+  transferable: Relevant to software engineering
+  tools: Tools
+  thesis: Final project
+  coursework: Relevant coursework
+  certifications: Certifications and courses
+  question: Question
+  approach: Approach
+  result: Result
+  read_more: Read more
+  contact_title: Let's talk
+  copy_email: Copy email
+  copied: Copied!
+  also_find_me: You can also find me here
+  built_with_jekyll: Built with Jekyll
+  based_on: based on
+  back_to_top: Back to top
+es:
+  skip: Saltar al contenido
+  nav: Secciones
+  language: Idioma
+  theme: Tema
+  sections:
+    about: Sobre mí
+    projects: Proyectos
+    experience: Experiencia
+    skills: Habilidades
+    education: Educación
+    languages: Idiomas
+    research: Investigación
+    contact: Contacto
+  photo_alt: "Foto de"
+  at_a_glance: De un vistazo
+  contact_me: Contactame
+  download_cv: Descargar CV
+  looking_for: Qué busco
+  built_with: Tecnologías
+  skills_developed: Habilidades desarrolladas
+  my_role: Mi rol
+  code: Código en GitHub
+  demo: Demo en vivo
+  case_study: Caso de estudio
+  private_repo: Código privado (proyecto de la empresa)
+  filter_label: Filtrar proyectos por tecnología
+  filter_all: Todos
+  showing: Mostrando
+  of: de
+  projects_word: proyectos
+  used_in: Usado en
+  project_one: proyecto
+  project_many: proyectos
+  legend: Nivel
+  level_1: Aprendiendo
+  level_2: Uso con soltura
+  level_3: Con confianza
+  click_to_filter: Hacé clic en una habilidad para filtrar los proyectos.
+  transferable: Relevante para ingeniería de software
+  tools: Herramientas
+  thesis: Trabajo final
+  coursework: Materias relevantes
+  certifications: Certificaciones y cursos
+  question: Pregunta
+  approach: Enfoque
+  result: Resultado
+  read_more: Leer más
+  contact_title: Hablemos
+  copy_email: Copiar email
+  copied: ¡Copiado!
+  also_find_me: También me encontrás acá
+  built_with_jekyll: Hecho con Jekyll
+  based_on: basado en
+  back_to_top: Volver arriba

@@ -1,0 +1,79 @@
+intro: "Mi experiencia combina desarrollo de software, inteligencia artificial, automatización de pruebas y optimización de procesos. He trabajado en equipos internacionales y multidisciplinarios, desarrollando soluciones técnicas y mejorando procesos en distintos entornos."
+
+items:
+  - role: "Pasante de Desarrollo de Software – Automatización de Pruebas"
+    company: "Philips Medizin Systeme Böblingen GmbH"
+    location: "Böblingen, Alemania"
+    date: "Mar. 2026 – Ago. 2026"
+    highlights:
+      - "Desarrollé y mantuve pruebas automatizadas para aplicaciones .NET utilizando C#, Cucumber y Gherkin, implementando escenarios de desarrollo guiado por comportamiento (BDD)."
+      - "Trabajé con NATS.NET para consumir mensajes de colas NATS, adquiriendo experiencia práctica en comunicación basada en mensajes y sistemas distribuidos orientados a eventos."
+      - "Colaboré en flujos de trabajo de pruebas automatizadas y procesos de integración y entrega continuas (CI/CD) utilizando Azure Pipelines."
+      - "Trabajé en un equipo internacional de desarrollo bajo metodologías ágiles, utilizando principalmente el alemán como idioma de trabajo."
+    transferable: "Desarrollo con .NET, automatización de pruebas, BDD, sistemas distribuidos, colas de mensajes, CI/CD, depuración y metodologías ágiles."
+    tools: [".NET", "C#", "Cucumber", "Gherkin", "NATS.NET", "Azure Pipelines", "Git"]
+
+  - role: "Pasante de Desarrollo de Software e Inteligencia Artificial"
+    company: "Centro de Tecnologías de la Información (CETEC), Universidad de Buenos Aires"
+    location: "Buenos Aires, Argentina"
+    date: "Sept. 2024 – Feb. 2025"
+    highlights:
+      - "Diseñé e implementé una API en Python para dar soporte a aplicaciones multimodales basadas en generación aumentada por recuperación (RAG)."
+      - "Integré y experimenté con herramientas y frameworks de inteligencia artificial, incluyendo Hugging Face, Ollama, Langflow y CrewAI."
+      - "Colaboré con un equipo multidisciplinario en la planificación y realización de talleres educativos, explicando conceptos avanzados de RAG y aplicaciones prácticas de inteligencia artificial."
+    transferable: "Desarrollo backend, diseño de API, integración de inteligencia artificial, documentación técnica, trabajo colaborativo y comunicación de conceptos técnicos."
+    tools: ["Python", "Hugging Face", "Ollama", "Langflow", "CrewAI", "RAG"]
+
+  - role: "Ayudante de Cátedra – Sistemas Operativos"
+    company: "Universidad de Buenos Aires"
+    location: "Buenos Aires, Argentina"
+    date: "Mar. 2024 – Ago. 2025"
+    highlights:
+      - "Evalué trabajos prácticos y proyectos de estudiantes sobre Sistemas Operativos, brindando devoluciones técnicas y verificando el cumplimiento de los requisitos de la materia."
+      - "Acompañé a estudiantes en la comprensión de conceptos de sistemas operativos y su implementación práctica."
+      - "Profundicé mis conocimientos técnicos mediante el análisis y la evaluación de soluciones relacionadas con conceptos fundamentales de sistemas operativos."
+    transferable: "Resolución de problemas técnicos, depuración, evaluación de código, pensamiento analítico, comunicación técnica y mentoría."
+
+  - role: "Integrante del Comité de Pasantes iXp – LAC"
+    company: "SAP"
+    location: "Buenos Aires, Argentina"
+    date: "Ene. 2022 – May. 2022"
+    highlights:
+      - "Coordiné y organicé eventos mensuales sobre finanzas, desarrollo profesional y programación para la comunidad de pasantes."
+      - "Colaboré en la elaboración y distribución de un boletín mensual con información sobre próximos eventos, novedades y actividades."
+      - "Trabajé junto con distintos equipos para coordinar actividades y fomentar la participación de la comunidad de pasantes de Latinoamérica."
+    transferable: "Coordinación de proyectos, comunicación con distintos equipos, trabajo colaborativo, organización de eventos y comunicación escrita."
+
+  - role: "Pasante de Finanzas iXp – Distribución de Facturas"
+    company: "SAP"
+    location: "Buenos Aires, Argentina"
+    date: "Nov. 2020 – May. 2022"
+    highlights:
+      - "Gestioné la distribución de facturas a clientes y departamentos internos de Latinoamérica, garantizando su entrega correcta y en tiempo y forma."
+      - "Colaboré con los equipos de Finanzas y Ventas para investigar y resolver discrepancias relacionadas con la facturación."
+      - "Identifiqué e implementé mejoras en los procesos que redujeron un 50 % el tiempo de procesamiento de facturas, aumentando la eficiencia operativa del equipo LAC."
+    transferable: "Optimización de procesos, pensamiento analítico, gestión de partes interesadas, resolución de problemas, atención al detalle y colaboración entre equipos."
+
+  - role: "Líder de Equipo – Desarrollo de Bots (Voluntariado)"
+    company: "BANGTAN ACADEMY"
+    location: "Proyecto internacional · Remoto"
+    date: "Feb. 2021 – Ago. 2023"
+    highlights:
+      - "Lideré un equipo internacional de voluntarios encargado del desarrollo y mantenimiento de bots de Discord para una comunidad dedicada al aprendizaje del idioma coreano."
+      - "Desarrollé servicios backend utilizando JavaScript, Node.js y TypeScript."
+      - "Administré la infraestructura en AWS, utilizando DynamoDB para la gestión de bases de datos e instancias EC2 para el despliegue de aplicaciones."
+      - "Coordiné las tareas del equipo y colaboré en el mantenimiento y la continuidad operativa de los servicios."
+    transferable: "Desarrollo backend, infraestructura cloud, administración de bases de datos, despliegue de aplicaciones, liderazgo técnico y coordinación de equipos internacionales."
+    tools: ["JavaScript", "TypeScript", "Node.js", "AWS", "DynamoDB", "EC2", "Discord API"]
+
+  - role: "Líder de Equipo – Desarrollo Web (Voluntariado)"
+    company: "ALL FOR ARMY"
+    location: "Proyecto internacional · Remoto"
+    date: "Feb. 2020 – May. 2021"
+    highlights:
+      - "Lideré un equipo internacional de voluntarios encargado del desarrollo y mantenimiento de dos sitios web basados en WordPress."
+      - "Desarrollé páginas y funcionalidades personalizadas utilizando PHP, JavaScript, HTML y CSS."
+      - "Implementé y personalicé plugins, temas y lógica del lado del servidor para adaptar los sitios a las necesidades del proyecto."
+      - "Coordiné el trabajo del equipo de desarrollo mediante la asignación de tareas, planificación de actividades y colaboración con diseñadores durante las etapas de diseño y desarrollo."
+    transferable: "Desarrollo web full-stack, liderazgo técnico, gestión de proyectos, trabajo en equipo internacional y colaboración interdisciplinaria."
+    tools: ["WordPress", "PHP", "JavaScript", "HTML", "CSS"]
