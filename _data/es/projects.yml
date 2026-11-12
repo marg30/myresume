@@ -95,3 +95,4 @@ items:
       - "Calidad y cobertura de código"
     languages: ["Ruby", "SQL"]
     tools: ["Sinatra", "Sequel", "PostgreSQL", "Telegram Bot API", "Spotify API", "Faraday", "RSpec", "Cucumber", "Gherkin", "WebMock", "SimpleCov", "RuboCop", "Rake", "Docker", "Docker Compose", "Kubernetes", "SemanticLogger", "GitLab CI/CD", "Git", "Behavior-Driven Development (BDD)", "Unit Testing", "Integration Testing"]
+    repo: "https://github.com/marg30/music-recommendation"
